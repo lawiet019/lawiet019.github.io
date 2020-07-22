@@ -99,4 +99,986 @@
             }
         });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
             loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>tr>
+<td>math.fsum()</td>
+<td>o find the sum of the values of an iterable without using a loop. A built-in function called sum() lets you calculate the sum of iterables as well, but fsum() is more accurate than sum().</td>
+<td><code>sum([.1, .1, .1, .1, .1, .1, .1, .1, .1, .1])  #0.9999999999999999 fsum([.1, .1, .1, .1, .1, .1, .1, .1, .1, .1]) #1.0</code></td>
+</tr>
+<tr>
+<td>math.sqrt()</td>
+<td>Calculate the Square Root</td>
+<td><code>sqrt(4) #2</code></td>
+</tr>
+<tr>
+<td>math.radians()</td>
+<td>convert degrees to radians</td>
+<td></td>
+</tr>
+<tr>
+<td>math.degrees()</td>
+<td>convert radians to degrees</td>
+<td></td>
+</tr>
+<tr>
+<td>math.sin()</td>
+<td>Return the sine of x radians.</td>
+<td></td>
+</tr>
+<tr>
+<td>math.tan(x)</td>
+<td>Return the tangent of x radians.</td>
+<td></td>
+</tr>
+<tr>
+<td>math.cos(x)</td>
+<td>Return the cosine of x radians.</td>
+<td></td>
+</tr>
+<tr>
+<td>math.hypot()</td>
+<td>calculate the hypotenuse of a triangle</td>
+<td></td>
+</tr>
+<tr>
+<td>math.comb(n, k)</td>
+<td>returns the number of ways to choose k items from n items without repetition and without particular order.</td>
+<td></td>
+</tr>
+<tr>
+<td>math.perm(n, k)</td>
+<td>returns the number of ways to choose k items from n items without repetition and with order.</td>
+<td></td>
+</tr>
+<tr>
+<td>math.isqrt()</td>
+<td>returns the integer square root of a non-negative integer.</td>
+<td></td>
+</tr>
+<tr>
+<td>math.prod()</td>
+<td>calculates the product of all of the elements in the input iterable. As with fsum(), this method can take iterables such as arrays, lists, or tuples.</td>
+<td></td>
+</tr>
+<tr>
+<td>math.dist()</td>
+<td>returns the Euclidean distance between two points p and q, each given as a sequence (or iterable) of coordinates. The two points must have the same dimension.</td>
+<td></td>
+</tr>
+<tr>
+<td>math.hypot()</td>
+<td>now handles more than two dimensions. Previously, it supported a maximum of two dimensions.</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li><code>math.isclose(a, b, *, rel_tol=1e-09, abs_tol=0.0)</code><br><code>rel_tol</code>: maximum difference for being considered “close”, relative to the magnitude of the input values<br><code>abs_tol</code>: rel_tol is the relative tolerance – it is the maximum allowed difference between a and b, relative to the larger absolute value of a or b. For example, to set a tolerance of 5%, pass rel_tol=0.05. The default tolerance is 1e-09, which assures that the two values are the same within about 9 decimal digits. rel_tol must be greater than zero.<br>The IEEE 754 special values of NaN, inf, and -inf will be handled according to IEEE rules. Specifically, NaN is not considered close to any other value, including NaN. inf and -inf are only considered close to themselves.</li>
+</ul>
+<ul>
+<li>math.floor/math.ceil/int()/math.trunc/round()<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">5.3</span></span><br><span class="line">b = - <span class="number">5.3</span></span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line">print(math.floor(a))</span><br><span class="line">print(math.floor(b))</span><br><span class="line">print(math.ceil(a))</span><br><span class="line">print(math.ceil(b))</span><br><span class="line">print(math.trunc(a))</span><br><span class="line">print(math.trunc(b))</span><br><span class="line">print(int(a))</span><br><span class="line">print(int(b))</span><br><span class="line">print(round(a))</span><br><span class="line">print(round(b))</span><br><span class="line"><span class="comment"># 5</span></span><br><span class="line"><span class="comment"># -6</span></span><br><span class="line"><span class="comment"># 6</span></span><br><span class="line"><span class="comment"># -5</span></span><br><span class="line"><span class="comment"># 5</span></span><br><span class="line"><span class="comment"># -5</span></span><br><span class="line"><span class="comment"># 5</span></span><br><span class="line"><span class="comment"># -5</span></span><br><span class="line"><span class="comment"># 5</span></span><br><span class="line"><span class="comment"># -5</span></span><br></pre></td></tr></table></figure>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference:"></a>reference:</h3><a href="https://realpython.com/python-math-module/">https://realpython.com/python-math-module/</a><br><a href="https://docs.python.org/3/library/math.html">https://docs.python.org/3/library/math.html</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-07-02T18:48:00.000Z" title="2020-07-02T18:48:00.000Z">2020-07-02</time><span class="level-item"> lawiet019 </span><span class="level-item"><a class="link-muted" href="/categories/technology/">technology</a></span><span class="level-item">8 minutes read (About 1225 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/07/02/common-modules-in-python-2-functools/">common_modules_in_python(2):functools</a></h1><div class="content"><p>Higher-order functions and operations on callable objects</p>
+<h2 id="functools-cached-property-func"><a href="#functools-cached-property-func" class="headerlink" title="@functools.cached_property(func)"></a><code>@functools.cached_property(func)</code></h2><p>Transform a method of a class into a property whose value is computed once and then cached as a normal attribute for the life of the instance. Similar to property(), with the addition of caching. Useful for expensive computed properties of instances that are otherwise effectively immutable.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DataSet</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, sequence_of_numbers)</span>:</span></span><br><span class="line">        self._data = sequence_of_numbers</span><br><span class="line"></span><br><span class="line"><span class="meta">    @cached_property</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">stdev</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> statistics.stdev(self._data)</span><br><span class="line"></span><br><span class="line"><span class="meta">    @cached_property</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">variance</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> statistics.variance(self._data)</span><br></pre></td></tr></table></figure>
+<h2 id="functools-lru-cache-maxsize-128-typed-False"><a href="#functools-lru-cache-maxsize-128-typed-False" class="headerlink" title="@functools.lru_cache(maxsize=128, typed=False)"></a><code>@functools.lru_cache(maxsize=128, typed=False)</code></h2><p><code>@functools.lru_cache(user_function)</code><br>Decorator to wrap a function with a memoizing callable that saves up to the maxsize most recent calls. It can save time when an expensive or I/O bound function is periodically called with the same arguments.<br>lru is least recently used, lru_cache can record the result of the function call, and directly use the previous return value when it is used again, without really calling it again.</p>
+<ul>
+<li>Distinct argument patterns may be considered to be distinct calls with separate cache entries. For example, f(a=1, b=2) and f(b=2, a=1) differ in their keyword argument order and may have two separate cache entries.</li>
+<li>If typed is set to true, function arguments of different types will be cached separately. For example, f(3) and f(3.0) will be treated as distinct calls with distinct results.</li>
+<li>If maxsize is set to None, the LRU feature is disabled and the cache can grow without bound.</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Calling recursion multiple times can be slow</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibonacci</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> n==<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> n==<span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> n&gt;<span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> fibonacci(n<span class="number">-1</span>)+fibonacci(n<span class="number">-2</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">101</span>):</span><br><span class="line">    print(i,<span class="string">":"</span>,fibonacci(i))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#solution1：</span></span><br><span class="line"><span class="comment"># fibonacci_dic=&#123;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibonacci</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> n <span class="keyword">in</span> fibonacci_dic:</span><br><span class="line">        <span class="keyword">return</span> fibonacci_dic[n]</span><br><span class="line">    <span class="keyword">if</span> n==<span class="number">1</span>:</span><br><span class="line">        value= <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> n==<span class="number">2</span>:</span><br><span class="line">        value= <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> n&gt;<span class="number">2</span>:</span><br><span class="line">        value=fibonacci(n<span class="number">-1</span>)+fibonacci(n<span class="number">-2</span>)</span><br><span class="line">    fibonacci_dic[n]=value</span><br><span class="line">    <span class="keyword">return</span> value</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">101</span>):</span><br><span class="line">    print(i,<span class="string">":"</span>,fibonacci(i))</span><br><span class="line"></span><br><span class="line"><span class="comment"># solution2:Decorator</span></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> lru_cache</span><br><span class="line"><span class="meta">@lru_cache(maxsize=1000)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibonacci</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> n==<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> n==<span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> n&gt;<span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> fibonacci(n<span class="number">-1</span>)+fibonacci(n<span class="number">-2</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">101</span>):</span><br><span class="line">    print(i,<span class="string">":"</span>,fibonacci(i))</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://zhuanlan.zhihu.com/p/76553221">how to realize the lru_cache</a></p>
+<h2 id="functools-total-ordering"><a href="#functools-total-ordering" class="headerlink" title="@functools.total_ordering"></a><code>@functools.total_ordering</code></h2><p>Given a class defining one or more rich comparison ordering methods, this class decorator supplies the rest. This simplifies the effort involved in specifying all of the possible rich comparison operations:</p>
+<p>The class must define one of <code>__lt__()</code>,<code>__le__()</code>, <code>__gt__()</code>, or <code>__ge__()</code>. In addition, the class should supply an <code>__eq__()</code> method.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@total_ordering</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_is_valid_operand</span><span class="params">(self, other)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> (hasattr(other, <span class="string">"lastname"</span>) <span class="keyword">and</span></span><br><span class="line">                hasattr(other, <span class="string">"firstname"</span>))</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__eq__</span><span class="params">(self, other)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> self._is_valid_operand(other):</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">NotImplemented</span></span><br><span class="line">        <span class="keyword">return</span> ((self.lastname.lower(), self.firstname.lower()) ==</span><br><span class="line">                (other.lastname.lower(), other.firstname.lower()))</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__lt__</span><span class="params">(self, other)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> self._is_valid_operand(other):</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">NotImplemented</span></span><br><span class="line">        <span class="keyword">return</span> ((self.lastname.lower(), self.firstname.lower()) &lt;</span><br><span class="line">                (other.lastname.lower(), other.firstname.lower()))</span><br></pre></td></tr></table></figure>
+<h2 id="functools-partial-func-args-keywords"><a href="#functools-partial-func-args-keywords" class="headerlink" title="functools.partial(func, /, *args, **keywords)"></a><code>functools.partial(func, /, *args, **keywords)</code></h2><p> When we need to call a function frequently, but some of the parameters are known fixed values, which may make the code appear redundant. At this time, you can consider using partial function.<br> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int(<span class="string">'1000000'</span>, base=<span class="number">2</span>)</span><br><span class="line"><span class="comment"># 64</span></span><br><span class="line">int(<span class="string">'1010101'</span>, base=<span class="number">2</span>)</span><br><span class="line"><span class="comment"># 85</span></span><br><span class="line"><span class="comment"># to simplify</span></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> partial</span><br><span class="line">int2 = partial(int, base=<span class="number">2</span>)</span><br><span class="line">int2(<span class="string">'110'</span>)</span><br><span class="line"><span class="comment"># 6</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="functools-partialmethod-func-args-keywords"><a href="#functools-partialmethod-func-args-keywords" class="headerlink" title="functools.partialmethod(func, /, *args, **keywords)"></a><code>functools.partialmethod(func, /, *args, **keywords)</code></h2><p>Return a new partialmethod descriptor which behaves like partial except that it is designed to be used as a method definition rather than being directly callable.Partial will throw error when used in class methods while partialmethod will not.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cell</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self._alive = <span class="literal">False</span></span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">alive</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self._alive</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">set_state</span><span class="params">(self, state)</span>:</span></span><br><span class="line">        self._alive = bool(state)</span><br><span class="line">    set_alive = partialmethod(set_state, <span class="literal">True</span>)</span><br><span class="line">    set_dead = partialmethod(set_state, <span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line">c = Cell()</span><br><span class="line">c.alive <span class="comment"># False</span></span><br><span class="line"></span><br><span class="line">c.set_alive()</span><br><span class="line">c.alive <span class="comment"># True</span></span><br></pre></td></tr></table></figure>
+<h2 id="functools-reduce-function-iterable-initializer"><a href="#functools-reduce-function-iterable-initializer" class="headerlink" title="functools.reduce(function, iterable[, initializer])"></a><code>functools.reduce(function, iterable[, initializer])</code></h2><p>Apply function of two arguments cumulatively to the items of iterable, from left to right, so as to reduce the iterable to a single value. For example, <code>reduce(lambda x, y: x+y, [1, 2, 3, 4, 5]) calculates ((((1+2)+3)+4)+5)</code>.<br>The left argument, x, is the accumulated value and the right argument, y, is the update value from the iterable</p>
+<h2 id="functools-singledispatch"><a href="#functools-singledispatch" class="headerlink" title="functools.singledispatch"></a><code>functools.singledispatch</code></h2><p>Similar to java’s overloading mechanism, you can define multiple overloaded variants for the same method in a class, which is better than using a long list of if/elif in a function.<br>It is used as a decorator. It can split the whole scheme into several small modules, The origial function  becomes a generic function: a set of functions that perform the same operation in different ways, depending on the type of the first parameter.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> singledispatch</span><br><span class="line">  <span class="keyword">import</span> numbers</span><br><span class="line"></span><br><span class="line"><span class="meta">  @singledispatch</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">sort_type</span><span class="params">(obj)</span>:</span></span><br><span class="line">      print(obj, type(obj), <span class="string">'obj'</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">  @sort_type.register(str)</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">_</span><span class="params">(text)</span>:</span></span><br><span class="line">      print(text, type(text), <span class="string">'str'</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">  @sort_type.register(numbers.Integral)</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">_</span><span class="params">(n)</span>:</span></span><br><span class="line">      print(n, type(n), <span class="string">'int'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="class-functools-singledispatchmethod-func"><a href="#class-functools-singledispatchmethod-func" class="headerlink" title="class functools.singledispatchmethod(func)"></a><code>class functools.singledispatchmethod(func)</code></h2><p>To define a generic method, decorate it with the <code>@singledispatchmethod</code> decorator. Note that the dispatch happens on the type of the first non-self or non-cls argument, create your function accordingly</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Negator</span>:</span></span><br><span class="line"><span class="meta">    @singledispatchmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">neg</span><span class="params">(self, arg)</span>:</span></span><br><span class="line">        <span class="keyword">raise</span> NotImplementedError(<span class="string">"Cannot negate a"</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">    @neg.register</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_</span><span class="params">(self, arg: int)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> -arg</span><br><span class="line"></span><br><span class="line"><span class="meta">    @neg.register</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_</span><span class="params">(self, arg: bool)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">not</span> arg</span><br></pre></td></tr></table></figure>
+<h2 id="functools-update-wrapper-wrapper-wrapped-assigned-WRAPPER-ASSIGNMENTS-updated-WRAPPER-UPDATES"><a href="#functools-update-wrapper-wrapper-wrapped-assigned-WRAPPER-ASSIGNMENTS-updated-WRAPPER-UPDATES" class="headerlink" title="functools.update_wrapper(wrapper, wrapped, assigned=WRAPPER_ASSIGNMENTS, updated=WRAPPER_UPDATES)"></a><code>functools.update_wrapper(wrapper, wrapped, assigned=WRAPPER_ASSIGNMENTS, updated=WRAPPER_UPDATES)</code></h2><p>The optional arguments are tuples to specify which attributes of the original function are assigned directly to the matching attributes on the wrapper function and which attributes of the wrapper function are updated with the corresponding attributes from the original function. The default values for these arguments are the module level constants WRAPPER_ASSIGNMENTS (which assigns to the wrapper function’s <code>__module__</code>, <code>__name__</code>, <code>__qualname__</code>, <code>__annotations__</code> and <code>__doc__</code>, the documentation string) and WRAPPER_UPDATES (which updates the wrapper function’s <code>__dict__</code>, i.e. the instance dictionary).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Parameters:</span><br><span class="line"></span><br><span class="line">1. wrapper: A wrapper function.</span><br><span class="line">2. wrapped: The function being wrapped over or the wrapped function.</span><br><span class="line">3. assigned: Attributes of the wrapped function which are assigned to the matching attributes of wrapper function as a tuple(optional argument).</span><br><span class="line">4. updated: Attributes of the wrapper function that are updated with respect to original function attributes as a tuple(optional argument).</span><br></pre></td></tr></table></figure>
+<p>example can be seen as below</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Python program to demonstrate</span></span><br><span class="line"><span class="comment"># ipdate)wrapper() method</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> functools <span class="keyword">as</span> ft</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Defining the decorator</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hi</span><span class="params">(func)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="string">"Hi has taken over Hello Documentation"</span></span><br><span class="line">        print(<span class="string">"Hi geeks"</span>)</span><br><span class="line">        func()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Note The following Steps Clearly</span></span><br><span class="line">    print(<span class="string">"UPDATED WRAPPER DATA"</span>)</span><br><span class="line">    print(<span class="string">f'WRAPPER ASSIGNMENTS :<span class="subst">&#123;ft.WRAPPER_ASSIGNMENTS&#125;</span>'</span>)</span><br><span class="line">    print(<span class="string">f'UPDATES : <span class="subst">&#123;ft.WRAPPER_UPDATES&#125;</span>'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Updating Metadata of wrapper  </span></span><br><span class="line">    <span class="comment"># using update_wrapper</span></span><br><span class="line">    ft.update_wrapper(wrapper, func)</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line"><span class="meta">@hi</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"this is the documentation of Hello Function"</span></span><br><span class="line">    print(<span class="string">"Hey Geeks"</span>)</span><br><span class="line"></span><br><span class="line">print(hello.__name__)</span><br><span class="line">print(hello.__doc__)</span><br><span class="line">help(hello)</span><br></pre></td></tr></table></figure>
+
+<h2 id="functools-wraps-wrapped-assigned-WRAPPER-ASSIGNMENTS-updated-WRAPPER-UPDATES"><a href="#functools-wraps-wrapped-assigned-WRAPPER-ASSIGNMENTS-updated-WRAPPER-UPDATES" class="headerlink" title="@functools.wraps(wrapped, assigned=WRAPPER_ASSIGNMENTS, updated=WRAPPER_UPDATES)"></a><code>@functools.wraps(wrapped, assigned=WRAPPER_ASSIGNMENTS, updated=WRAPPER_UPDATES)</code></h2><p>This is a convenience function for invoking update_wrapper() as a function decorator when defining a wrapper function. It is equivalent to partial(update_wrapper, wrapped=wrapped, assigned=assigned, updated=updated)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> functools <span class="keyword">import</span> wraps</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">my_decorator</span><span class="params">(f)</span>:</span></span><br><span class="line"><span class="meta">... </span>    @wraps(f)</span><br><span class="line"><span class="meta">... </span>    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args, **kwds)</span>:</span></span><br><span class="line"><span class="meta">... </span>        print(<span class="string">'Calling decorated function'</span>)</span><br><span class="line"><span class="meta">... </span>        <span class="keyword">return</span> f(*args, **kwds)</span><br><span class="line"><span class="meta">... </span>    <span class="keyword">return</span> wrapper</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>@my_decorator</span><br><span class="line"><span class="meta">... </span><span class="function"><span class="keyword">def</span> <span class="title">example</span><span class="params">()</span>:</span></span><br><span class="line"><span class="meta">... </span>    <span class="string">"""Docstring"""</span></span><br><span class="line"><span class="meta">... </span>    print(<span class="string">'Called example function'</span>)</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>example()</span><br><span class="line">Calling decorated function</span><br><span class="line">Called example function</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>example.__name__</span><br><span class="line"><span class="string">'example'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>example.__doc__</span><br><span class="line"><span class="string">'Docstring'</span></span><br></pre></td></tr></table></figure></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-07-02T01:35:00.000Z" title="2020-07-02T01:35:00.000Z">2020-07-01</time><span class="level-item"> lawiet019 </span><span class="level-item"><a class="link-muted" href="/categories/technology/">technology</a></span><span class="level-item">4 minutes read (About 647 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/07/01/Floyd%E2%80%99s-Cycle-Finding-Algorithm/">Floyd’s Cycle-Finding Algorithm</a></h1><div class="content"><h2 id="Approach"><a href="#Approach" class="headerlink" title="Approach:"></a>Approach:</h2><p>This is the fastest method to detect cycles and has been described below:</p>
+<ul>
+<li>Traverse linked list using two pointers.</li>
+<li>Move one pointer(slow_p) by one and another pointer(fast_p) by two. </li>
+<li>If these pointers meet at the same node then there is a loop. If pointers do not meet then linked list doesn’t have a loop.<br><img src="./img/cycle_det1.jpeg" alt=""></li>
+</ul>
+<p><img src="/images/pasted-5.png" alt="upload successful"></p>
+<h2 id="why-it-works"><a href="#why-it-works" class="headerlink" title="why it works:"></a>why it works:</h2><p>1) When the slow pointer enters the loop, the fast pointer is already inside the loop. Set the distance between the fast pointer and the slow pointer be K.<br>2) Now, if we consider the slow movement of the pointers, we can notice that the distance between them increases by one after each iteration. After an iteration (slow pointer = next node of slow pointer, fast pointer = next next node of fast pointer), the distance between fast pointer and slow pointer becomes K + 1, after two iterations, it is K + 2, and so on. When the distance becomes the length n of the ring, they will join because they move in a ring of length n.<br>For example, we can see in the following figure that the initial distance is 2. After one iteration, the distance becomes 3, and after two iterations, the distance becomes 4. After three iterations, it becomes 5. It is also  distance 0. They meet.</p>
+<p><img src="/images/pasted-6.png" alt="upload successful"><br><img src="./img/cycle_det2.jpeg" alt=""></p>
+<h2 id="complexity"><a href="#complexity" class="headerlink" title="complexity"></a>complexity</h2><ul>
+<li>Time complexity: O(n).<br>Only one traversal of the loop is needed.</li>
+<li>Auxiliary Space:O(1).<br>There is no space required.</li>
+</ul>
+<h2 id="implement-in-Python"><a href="#implement-in-Python" class="headerlink" title="implement in Python"></a>implement in Python</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Leercide 141. Linked List Cycle</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hasCycle</span><span class="params">(self, head)</span>:</span></span><br><span class="line">        slow = head </span><br><span class="line">        fast = head  </span><br><span class="line">        <span class="keyword">while</span> slow <span class="keyword">and</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">            slow = slow.next </span><br><span class="line">            fast = fast.next.next </span><br><span class="line">            <span class="keyword">if</span> slow == fast:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<h2 id="Extend-knowledge"><a href="#Extend-knowledge" class="headerlink" title="Extend knowledge"></a>Extend knowledge</h2><ul>
+<li>question：<ul>
+<li>How to  the length of the cycle?</li>
+<li>How to find the first node in a cycle (i.e. linked list cycle II)?</li>
+<li>How to change a linked list into a single linked list?</li>
+<li>How to judge whether two single linked lists have intersection? How to find the first intersection node?</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/pasted-7.png" alt=""><br>The distance traveled by slow at the first encounter: <code>a+b</code>, the distance traveled by fast: <code>a+b+c+b</code>.Because the speed of fast is twice that of slow, the distance traveled by fast is twice that of slow. There are <code>2(a+b) = a+b+c+b</code>, and you can get <code>a=c</code> (this conclusion is very important!</p>
+<p>We found that L=b+c=a+b, that is,</p>
+<ol>
+<li>From the beginning to the first encounter of the two points, the number of cycles is equal to the length of the ring.</li>
+<li>We have already reached the conclusion a=c, then let the two pointers start from X and Z, one step at a time, then it will meet at Y!That is the first node of the ring.</li>
+<li>At the end of the previous question, the link between the node before point Y in segment c and Y can be cut off.</li>
+<li>How to judge whether two singly linked lists have intersection?First determine whether the two linked lists have cycles, if one has cycles and one has no cycles, it must not intersect; if both have no rings, determine whether the tails of the two lists are equal; if both have cycles, determine the Z on a linked list Whether the point is on another linked list.<br>Here is an example to return the node cycles begins(142. Linked List Cycle II)<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">detectCycle</span><span class="params">(self, head)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type head: ListNode</span></span><br><span class="line"><span class="string">        :rtype: ListNode</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        slow = head</span><br><span class="line">        fast = head</span><br><span class="line">        <span class="keyword">while</span> slow <span class="keyword">and</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">            slow = slow.next </span><br><span class="line">            fast = fast.next.next </span><br><span class="line">            <span class="keyword">if</span> slow == fast:</span><br><span class="line">                slow = head </span><br><span class="line">                <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">                    <span class="keyword">if</span> slow == fast:</span><br><span class="line">                        <span class="keyword">return</span> slow </span><br><span class="line">                    slow = slow.next</span><br><span class="line">                    fast = fast.next</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><p><a href="https://blog.csdn.net/ccmlove123/article/details/104052556">https://blog.csdn.net/ccmlove123/article/details/104052556</a><br><a href="https://blog.csdn.net/xy010902100449/article/details/48995255">https://blog.csdn.net/xy010902100449/article/details/48995255</a></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-07-01T17:48:00.000Z" title="2020-07-01T17:48:00.000Z">2020-07-01</time><span class="level-item"> lawiet019 </span><span class="level-item"><a class="link-muted" href="/categories/technology/">technology</a></span><span class="level-item">2 minutes read (About 345 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/07/01/Topological-sorting/">Topological sorting</a></h1><div class="content"><h2 id="1-defintation"><a href="#1-defintation" class="headerlink" title="1. defintation:"></a>1. defintation:</h2><p>Topological sorting problem: given digraph G = (V, E) ,<br>find a linear ordering of vertices such that:<br>for all edges (v, w) in E, v precedes w in the ordering.</p>
+<p><img src="/images/pasted-3.png" alt="upload successful"><br>Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge uv, vertex u comes before v in the ordering. Topological Sorting for a graph is not possible if the graph is not a DAG.</p>
+<h2 id="2-alogrithm"><a href="#2-alogrithm" class="headerlink" title="2.alogrithm"></a>2.alogrithm</h2><ul>
+<li>Step 1: Identify vertices that have no incoming edge<br>• The <code>in-degree</code> of these vertices is zero<br>If no such edges, graph has cycles (cyclic graph)</li>
+<li>Step 2: Delete this vertex of in-degree 0 and all its<br>outgoing edges from the graph. Place it in the output.</li>
+<li>Step 3: Repeat Steps 1 and Step 2 until graph is empty<h2 id="3-implemented-in-Python"><a href="#3-implemented-in-Python" class="headerlink" title="3. implemented in Python"></a>3. implemented in Python</h2></li>
+</ul>
+<p><img src="/images/pasted-4.png" alt="upload successful"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Python program to print topological sorting of a DAG</span></span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict</span><br><span class="line"></span><br><span class="line"><span class="comment">#Class to represent a graph</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Graph</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,vertices)</span>:</span></span><br><span class="line">        self.graph = defaultdict(list) <span class="comment">#dictionary containing adjacency List</span></span><br><span class="line">        self.V = vertices <span class="comment">#No. of vertices</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># function to add an edge to graph</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addEdge</span><span class="params">(self,u,v)</span>:</span></span><br><span class="line">        self.graph[u].append(v)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># A recursive function used by topologicalSort</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">topologicalSortUtil</span><span class="params">(self,v,visited,stack)</span>:</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># Mark the current node as visited.</span></span><br><span class="line">        visited[v] = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># Recur for all the vertices adjacent to this vertex</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> self.graph[v]:</span><br><span class="line">            <span class="keyword">if</span> visited[i] == <span class="literal">False</span>:</span><br><span class="line">                self.topologicalSortUtil(i,visited,stack)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Push current vertex to stack which stores result</span></span><br><span class="line">        stack.insert(<span class="number">0</span>,v)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># The function to do Topological Sort. It uses recursive  </span></span><br><span class="line">    <span class="comment"># topologicalSortUtil()</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">topologicalSort</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># Mark all the vertices as not visited</span></span><br><span class="line">        visited = [<span class="literal">False</span>]*self.V</span><br><span class="line">        stack =[]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Call the recursive helper function to store Topological</span></span><br><span class="line">        <span class="comment"># Sort starting from all vertices one by one</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(self.V):</span><br><span class="line">            <span class="keyword">if</span> visited[i] == <span class="literal">False</span>:</span><br><span class="line">                self.topologicalSortUtil(i,visited,stack)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Print contents of the stack</span></span><br><span class="line">        print(stack)</span><br><span class="line"></span><br><span class="line">g= Graph(<span class="number">6</span>)</span><br><span class="line">g.addEdge(<span class="number">5</span>, <span class="number">2</span>);</span><br><span class="line">g.addEdge(<span class="number">5</span>, <span class="number">0</span>);</span><br><span class="line">g.addEdge(<span class="number">4</span>, <span class="number">0</span>);</span><br><span class="line">g.addEdge(<span class="number">4</span>, <span class="number">1</span>);</span><br><span class="line">g.addEdge(<span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line">g.addEdge(<span class="number">3</span>, <span class="number">1</span>);</span><br><span class="line">g.topologicalSort()</span><br><span class="line"><span class="comment">#This code is contributed by Neelam Yadav</span></span><br></pre></td></tr></table></figure>
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><p>geeksforgeeks.org/topological-sorting/</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-06-28T17:03:00.000Z" title="2020-06-28T17:03:00.000Z">2020-06-28</time><span class="level-item"> lawiet019 </span><span class="level-item"><a class="link-muted" href="/categories/technology/">technology</a></span><span class="level-item">15 minutes read (About 2295 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/06/28/tree-algorithm-in-Python/">tree algorithm in Python</a></h1><div class="content"><h2 id="Definition-what-is-tree"><a href="#Definition-what-is-tree" class="headerlink" title="Definition: what is tree?"></a>Definition: what is tree?</h2><p>two important features:</p>
+<ul>
+<li>connected</li>
+<li>no cycles</li>
+</ul>
+<blockquote>
+<p>a feature of tree: the number of edges is number of nodes - proof : remove the root node</p>
+</blockquote>
+<p>application: Graph Valid Tree<br>Check if a given graph is tree or not</p>
+<ul>
+<li><p>How to detect cycle in an undirected graph?<br>We can either use BFS or DFS. For every visited vertex <code>v</code>, if there is an adjacent <code>u</code> such that <code>u</code> is already visited and <code>u</code> is not parent of <code>v</code>, then there is a cycle in graph. If we don’t find such an adjacent for any vertex, we say that there is no cycle (See Detect cycle in an undirected graph for more details).</p>
+</li>
+<li><p>How to check for connectivity?<br>Since the graph is undirected, we can start BFS or DFS from any vertex and check if all vertices are reachable or not. If all vertices are reachable, then graph is connected, otherwise not.</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> collections</span><br><span class="line"><span class="comment"># BFS solution. Same complexity but faster version.</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="comment"># @param &#123;integer&#125; n</span></span><br><span class="line">    <span class="comment"># @param &#123;integer[][]&#125; edges</span></span><br><span class="line">    <span class="comment"># @return &#123;boolean&#125;</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">validTree</span><span class="params">(self, n, edges)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> len(edges) != n - <span class="number">1</span>:  <span class="comment"># Check number of edges. - there is the Definition of the tree</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># init node's neighbors in dict</span></span><br><span class="line">        neighbors = collections.defaultdict(list)</span><br><span class="line">        <span class="keyword">for</span> u, v <span class="keyword">in</span> edges:</span><br><span class="line">            neighbors[u].append(v)</span><br><span class="line">            neighbors[v].append(u)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># BFS to check whether the graph is valid tree.</span></span><br><span class="line">        q = collections.deque([<span class="number">0</span>])</span><br><span class="line">        visited = set([<span class="number">0</span>])</span><br><span class="line">        <span class="keyword">while</span> q:</span><br><span class="line">            curr = q.popleft()</span><br><span class="line">            <span class="keyword">for</span> node <span class="keyword">in</span> neighbors[curr]:</span><br><span class="line">                <span class="keyword">if</span> node <span class="keyword">not</span> <span class="keyword">in</span> visited:</span><br><span class="line">                    visited.add(node)</span><br><span class="line">                    q.append(node)</span><br><span class="line">        <span class="keyword">return</span> len(visited) == n</span><br></pre></td></tr></table></figure>
+<h3 id="Vocabulary"><a href="#Vocabulary" class="headerlink" title="Vocabulary"></a>Vocabulary</h3><ul>
+<li><p>Node</p>
+<p>  A node is a fundamental part of a tree. It can have a name, which we call the “key.” A node may also have additional information. We call this additional information the “payload.” While the payload information is not central to many tree algorithms, it is often critical in applications that make use of trees.</p>
+</li>
+<li><p>Edge</p>
+<p>  An edge is another fundamental part of a tree. An edge connects two nodes to show that there is a relationship between them. Every node (except the root) is connected by exactly one incoming edge from another node. Each node may have several outgoing edges.</p>
+</li>
+<li><p>Root</p>
+<p>  The root of the tree is the only node in the tree that has no incoming edges.</p>
+</li>
+<li><p>Path</p>
+<p>  A path is an ordered list of nodes that are connected by edges. For example, Mammal → Carnivora → Felidae → Felis → Domestica is a path.</p>
+</li>
+<li><p>Children</p>
+<p>  The set of nodes 𝑐 that have incoming edges from the same node to are said to be the children of that node.</p>
+</li>
+<li><p>Parent</p>
+<p>  A node is the parent of all the nodes it connects to with outgoing edges.</p>
+</li>
+<li><p>Sibling</p>
+<p>  Nodes in the tree that are children of the same parent are said to be siblings.</p>
+</li>
+<li><p>Subtree</p>
+<p>  A subtree is a set of nodes and edges comprised of a parent and all the descendants of that parent.</p>
+</li>
+<li><p>Leaf Node</p>
+<p>  A leaf node is a node that has no children.</p>
+</li>
+<li><p>Level</p>
+<p>  The level of a node 𝑛 is the number of edges on the path from the root node to 𝑛.</p>
+</li>
+<li><p>Height</p>
+<p>  The height of a tree is equal to the maximum level of any node in the tree.</p>
+</li>
+<li><p>degree </p>
+<p>  The degree of a tree is the maximum degree of a node in the tree. For example:If the maximum degree of a node is 2, then it is a binary tree. Likewise, if the maximum degree of a node is 3, then it becomes a ternary tree.P.S: Degree of a node is the maximum number of child nodes it can have.</p>
+</li>
+</ul>
+<h3 id="Binary-tree"><a href="#Binary-tree" class="headerlink" title="Binary tree"></a>Binary tree</h3><p>a binary tree is a tree data structure in which each node has at most two children, which are referred to as the left child and the right child.</p>
+<ul>
+<li>how to implement it in Python<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BinaryTree</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, value)</span>:</span></span><br><span class="line">        self.value = value</span><br><span class="line">        self.left_child = <span class="literal">None</span></span><br><span class="line">        self.right_child = <span class="literal">None</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">insert_left</span><span class="params">(self, value)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.left_child == <span class="literal">None</span>:</span><br><span class="line">            self.left_child = BinaryTree(value)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            new_node = BinaryTree(value)</span><br><span class="line">            new_node.left_child = self.left_child</span><br><span class="line">            self.left_child = new_node</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">insert_right</span><span class="params">(self, value)</span>:</span></span><br><span class="line">            <span class="keyword">if</span> self.right_child == <span class="literal">None</span>:</span><br><span class="line">                self.right_child = BinaryTree(value)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                new_node = BinaryTree(value)</span><br><span class="line">                new_node.right_child = self.right_child</span><br><span class="line">                self.right_child = new_node</span><br></pre></td></tr></table></figure>
+<h3 id="tree-traversal"><a href="#tree-traversal" class="headerlink" title="tree traversal"></a>tree traversal</h3>there are two options:<br>Depth-First Search (DFS) and Breadth-First Search (BFS).</li>
+<li>DFS<br>Depth-first search (DFS) is an algorithm for traversing or searching tree or graph data structures.. We can simply begin from a node, then traverse its adjacent (or children) without caring about cycles. And if we begin from a single node (root), and traverse this way, it is guaranteed that we traverse the whole tree as there is no dis-connectivity,<br>There are three ways in tree traversal:<ul>
+<li>preorder<blockquote>
+<p>Algorithm Preorder(tree)</p>
+<ol>
+<li>Visit the root.</li>
+<li>Traverse the left subtree, i.e., call Preorder(left-subtree)</li>
+<li>Traverse the right subtree, i.e., call Preorder(right-subtree)</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, val=<span class="number">0</span>, left=None, right=None)</span>:</span></span><br><span class="line">        self.val = val</span><br><span class="line">        self.left = left</span><br><span class="line">        self.right = right</span><br><span class="line"><span class="comment"># recursive</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">preorderTraversal</span><span class="params">(self, root)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type root: TreeNode</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line"></span><br><span class="line">        ret = []</span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">fn</span><span class="params">(node)</span>:</span></span><br><span class="line">            <span class="keyword">if</span> node:</span><br><span class="line">                ret.append(node.val)</span><br><span class="line">                fn(node.left)</span><br><span class="line">                fn(node.right)</span><br><span class="line">        fn(root)</span><br><span class="line">        <span class="keyword">return</span> ret</span><br><span class="line"><span class="comment"># iterative</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">preorderTraversal</span><span class="params">(self, root)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line"></span><br><span class="line">        stack = [root]</span><br><span class="line">        ret = []</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(stack):</span><br><span class="line">            node = stack.pop()</span><br><span class="line">            ret.append(node.val)</span><br><span class="line">            <span class="keyword">if</span> node.right: stack.append(node.right)</span><br><span class="line">            <span class="keyword">if</span> node.left: stack.append(node.left)</span><br><span class="line">        <span class="keyword">return</span> ret</span><br></pre></td></tr></table></figure>
+- application:
+  1. Leetcode 1028. Recover a Tree From Preorder Traversal
+  2. Leetcode 144. Binary Tree Preorder Traversal
+  3. Leetcode 971. Flip Binary Tree To Match Preorder Traversal
+  4. Leetcode 589. N-ary Tree Preorder Traversal
+  5. Leetcode 331. Verify Preorder Serialization of a Binary Tree</code></pre><ul>
+<li>inorder<blockquote>
+<p>Algorithm Inorder(tree)</p>
+<ol>
+<li>Traverse the left subtree, i.e., call Inorder(left-subtree)</li>
+<li>Visit the root.</li>
+<li>Traverse the right subtree, i.e., call Inorder(right-subtree)</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<pre><code><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,key)</span>:</span></span><br><span class="line">        self.left = <span class="literal">None</span></span><br><span class="line">        self.right = <span class="literal">None</span></span><br><span class="line">        self.val = key</span><br><span class="line"></span><br><span class="line">ret = []</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">inOrderTraversal</span><span class="params">(root)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> root:</span><br><span class="line">        inOrderTraversal(root.left)</span><br><span class="line">        ret.append(root.val)</span><br><span class="line">        inOrderTraversal(root.right)</span><br></pre></td></tr></table></figure>
+- application:
+1. Leetcode 94. Binary Tree Inorder Traversal
+2. Leetcode 105. Construct Binary Tree from Preorder and Inorder Traversal</code></pre><ul>
+<li><p>postorder</p>
+<blockquote>
+<p>Algorithm Postorder(tree)</p>
+<ol>
+<li>Traverse the left subtree, i.e., call Postorder(left-subtree)</li>
+<li>Traverse the right subtree, i.e., call Postorder(right-subtree)</li>
+<li>Visit the root.</li>
+</ol>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, val=<span class="number">0</span>, left=None, right=None)</span>:</span></span><br><span class="line">        self.val = val</span><br><span class="line">        self.left = left</span><br><span class="line">        self.right = right</span><br><span class="line"><span class="comment"># recursive</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">postorderTraversal</span><span class="params">(self, root)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type root: TreeNode</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        ret = []</span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">dfs</span><span class="params">(root)</span>:</span></span><br><span class="line">            <span class="keyword">if</span> root:</span><br><span class="line">                dfs(root.left)</span><br><span class="line">                dfs(root.right)</span><br><span class="line">                ret.append(root.val)</span><br><span class="line">        dfs(root)</span><br><span class="line">        <span class="keyword">return</span> ret</span><br><span class="line"><span class="comment">#iterative</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">postorderTraversal</span><span class="params">(self, root)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type root: TreeNode</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line">        stack = [root]</span><br><span class="line">        ret = []</span><br><span class="line">        <span class="keyword">while</span> stack:</span><br><span class="line">            cur = stack.pop()</span><br><span class="line">            ret.append(cur.val)</span><br><span class="line">            <span class="keyword">if</span> cur.left:</span><br><span class="line">                stack.append(cur.left)</span><br><span class="line">            <span class="keyword">if</span> cur.right:</span><br><span class="line">                stack.append(cur.right)</span><br><span class="line">        <span class="keyword">return</span> ret[::<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>application:<ol>
+<li>Leetcode 590. N-ary Tree Postorder Traversal</li>
+<li>Leetcode 145. Binary Tree Postorder Traversal</li>
+<li>Leetcode 106. Construct Binary Tree from Inorder and Postorder Traversal</li>
+</ol>
+<ul>
+<li>BFS<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> deque</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">BFStraversal</span><span class="params">(self,root)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">        stack = deque([root])</span><br><span class="line">        ret = []</span><br><span class="line">        <span class="keyword">while</span> stack:</span><br><span class="line">            cur = stack.pop()</span><br><span class="line">            ret.append(cur.val)</span><br><span class="line">            <span class="keyword">if</span> cur.left:</span><br><span class="line">                stack.appendleft(cur.left)</span><br><span class="line">            <span class="keyword">if</span> cur.right:</span><br><span class="line">                stack.appendleft(cur.right)</span><br><span class="line">        <span class="keyword">return</span> ret</span><br></pre></td></tr></table></figure>
+<h2 id="full-binary-tree-vs-complete-binary-tree"><a href="#full-binary-tree-vs-complete-binary-tree" class="headerlink" title="full binary tree vs complete binary tree"></a>full binary tree vs complete binary tree</h2></li>
+<li>A <code>full binary tree</code> (sometimes proper binary tree or 2-tree) is a tree in which every node other than the leaves has two children. </li>
+<li>A <code>complete binary tree</code>  is a binary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible</li>
+<li><code>AVL tree</code> is a self-balancing Binary Search Tree (BST) where the difference between heights of left and right subtrees cannot be more than one for all nodes (for every node).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="binary-search-tree-BST"><a href="#binary-search-tree-BST" class="headerlink" title="binary search tree (BST)"></a>binary search tree (BST)</h2><p>An important property of a Binary Search Tree is that the value of a Binary Search Tree nodeis larger than the value of the offspring of its left child, but smaller than the value of the offspring of its right child.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BinarySearchTree</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, value)</span>:</span></span><br><span class="line">        self.value = value</span><br><span class="line">        self.left_child = <span class="literal">None</span></span><br><span class="line">        self.right_child = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">insert_node</span><span class="params">(self, value)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> value &lt;= self.value <span class="keyword">and</span> self.left_child:</span><br><span class="line">            self.left_child.insert_node(value)</span><br><span class="line">        <span class="keyword">elif</span> value &lt;= self.value:</span><br><span class="line">            self.left_child = BinarySearchTree(value)</span><br><span class="line">        <span class="keyword">elif</span> value &gt; self.value <span class="keyword">and</span> self.right_child:</span><br><span class="line">            self.right_child.insert_node(value)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self.right_child = BinarySearchTree(value)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>application:<ol>
+<li>Leetcode 109. Convert Sorted List to Binary Search Tree</li>
+<li>Leetcode 96. Unique Binary Search Trees</li>
+<li>Leetcode 95. Unique Binary Search Trees II</li>
+<li>Leetcode 1008. Construct Binary Search Tree from Preorder Traversal</li>
+<li>Leetcode 235. Lowest Common Ancestor of a Binary Search Tree</li>
+<li>Leetcode 98. Validate Binary Search Tree</li>
+</ol>
+</li>
+</ul>
+<h2 id="trie"><a href="#trie" class="headerlink" title="trie"></a>trie</h2><ul>
+<li>defination :a trie, also called digital tree or prefix tree, is a kind of search tree—an ordered tree data structure used to store a dynamic set or associative array where the keys are usually strings.Here’s a trie that stores “David”, “Maria”, and “Mario”.</li>
+</ul>
+<p><img src="/images/pasted-10.png" alt="upload successful"></p>
+<ul>
+<li>Strengths<ul>
+<li>Sometimes Space-Efficient. If you’re storing lots of words that start with similar patterns, tries may reduce the overall storage cost by storing shared prefixes once.</li>
+<li>Efficient Prefix Queries. Tries can quickly answer queries about words with shared prefixes, like:<ul>
+<li>How many words start with “choco”?</li>
+<li>What’s the most likely next letter in a word that starts with “strawber”?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Weaknesses<ul>
+<li>Usually Space-Inefficient. Tries rarely save space when compared to storing strings in a set.</li>
+<li>ASCII characters in a string are one byte each. Each link between trie nodes is a pointer to an address—eight bytes on a 64-bit system. So, the overhead of linking nodes together often outweighs the savings from storing fewer characters.</li>
+<li>Not Standard. Most languages don’t come with a built-in trie implementation. You’ll need to implement one yourself.</li>
+</ul>
+</li>
+</ul>
+<p>What happens if we have two words and one is a prefix of the other?<br>we need to mark the word ending like using another node or True</p>
+<p>Here is an example </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Leetcode 208:Implement Trie (Prefix Tree)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TrieNode</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.children = &#123;&#125;</span><br><span class="line">        self.endofWord = <span class="literal">False</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Trie</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        Initialize your data structure here.</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        self.root = TrieNode()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">insert</span><span class="params">(self, word: str)</span> -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        Inserts a word into the trie.</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        n = len(word)</span><br><span class="line">        start = self.root</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">            <span class="keyword">if</span> word[i] <span class="keyword">not</span> <span class="keyword">in</span> start.children:</span><br><span class="line">                start.children[word[i]] = TrieNode()</span><br><span class="line">            start = start.children[word[i]]</span><br><span class="line">        start.endofWord = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">search</span><span class="params">(self, word: str)</span> -&gt; bool:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        Returns if the word is in the trie.</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        n = len(word)</span><br><span class="line">        start = self.root</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">            <span class="keyword">if</span> word[i] <span class="keyword">not</span> <span class="keyword">in</span> start.children:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            start = start.children[word[i]]</span><br><span class="line">        <span class="keyword">return</span> start.endofWord</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">startsWith</span><span class="params">(self, prefix: str)</span> -&gt; bool:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        Returns if there is any word in the trie that starts with the given prefix.</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        n = len(prefix)</span><br><span class="line">        start = self.root</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">            <span class="keyword">if</span> prefix[i] <span class="keyword">not</span> <span class="keyword">in</span> start.children:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            start = start.children[prefix[i]]</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Radix-tree"><a href="#Radix-tree" class="headerlink" title="Radix tree"></a>Radix tree</h2><p>a radix tree (also radix trie or compact prefix tree) is a data structure that represents a space-optimized trie (prefix tree) in which each node that is the only child is merged with its parent. The result is that the number of children of every internal node is at most the radix r of the radix tree, where r is a positive integer and a power x of 2.</p>
+<p><img src="/images/pasted-11.png" alt="upload successful"></p>
+<h2 id="segment-tree"><a href="#segment-tree" class="headerlink" title="segment tree"></a>segment tree</h2><ul>
+<li><p>defination:<br>Segment Tree is a basically a binary tree used for storing the intervals or segments. Each node in the Segment Tree represents an interval. Consider an array  of size  N and a corresponding Segment Tree T.(It is AVL)</p>
+<ol>
+<li>The root of T will represent the whole array A[:N] . </li>
+<li>Each leaf in the Segment Tree T  will represent a single element A[i]  such that 0 &lt;= i &lt; N.</li>
+<li>The internal nodes in the Segment Tree  represents the union of elementary intervals A[i:j]  where  0&lt;= i&lt;j&lt; N.</li>
+</ol>
+</li>
+<li><p>application:<br>Sum of given range</p>
+</li>
+<li><p>image:</p>
+</li>
+</ul>
+<p><img src="/images/pasted-12.png" alt="segement tree"></p>
+<h2 id="Binary-Indexed-Tree"><a href="#Binary-Indexed-Tree" class="headerlink" title="Binary Indexed Tree"></a>Binary Indexed Tree</h2><ul>
+<li>what is binary indexed tree<br>As the name suggests, it is to use arrays to simulate tree structures. Then a question arises, why not build trees directly? The answer is  there is no need to build trees for problems that arrays can handle. It is similar to the structure of trie tree.</li>
+<li>For what<br>update and sum for a interval</li>
+<li>binary indexed tree vs segement tree<br>The problems that a binary indexed tree can solve can be solved with a line segment tree. What is the difference between the two?The coefficient of the tree array is much less.</li>
+<li>advantages vs disadvantages<br>The complexity of modification and query is O(logN), and the coefficient is much less than that of the line segment tree, faster than the traditional array, and easy to write.The disadvantage is that it still cannot be solved when encountering complex interval problems, and the function is still limited.</li>
+<li>understand the binary indexed </li>
+</ul>
+<p><img src="/images/pasted-13.png" alt="binary_indexed_tree.png"><br>The black array represents the original array (replaced with A[i] below), and the red structure represents our tree-like array (replaced with C[i] below).<br>The rules can be seen as follows</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">C[1] &#x3D; A[1];</span><br><span class="line">C[2] &#x3D; A[1] + A[2];</span><br><span class="line">C[3] &#x3D; A[3];</span><br><span class="line">C[4] &#x3D; A[1] + A[2] + A[3] + A[4];</span><br><span class="line">C[5] &#x3D; A[5];</span><br><span class="line">C[6] &#x3D; A[5] + A[6];</span><br><span class="line">C[7] &#x3D; A[7];</span><br><span class="line">C[8] &#x3D; A[1] + A[2] + A[3] + A[4] + A[5] + A[6] + A[7] + A[8];</span><br><span class="line">C[i] &#x3D; A[i - 2k+1] + A[i - 2k+2] + ... + A[i];&#x2F;&#x2F;k is the length of consecutive zeros from the lowest bit to the highest bit in the binary of i</span><br></pre></td></tr></table></figure>
+<p>More detail :<br><a href="https://www.youtube.com/watch?v=CWDQJGaN1gY">https://www.youtube.com/watch?v=CWDQJGaN1gY</a></p>
+<ul>
+<li><p>operation</p>
+<ul>
+<li><p>sum </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> getSum(x): Returns the sum of the sub-array arr[0,...,x]</span><br><span class="line">&#x2F;&#x2F; Returns the sum of the sub-array arr[0,...,x] using BITree[0..n], which is constructed from arr[0..n-1]</span><br><span class="line">1) Initialize the output sum as 0, the current index as x+1.</span><br><span class="line">2) Do following while the current index is greater than 0.</span><br><span class="line">...a) Add BITree[index] to sum</span><br><span class="line">...b) Go to the parent of BITree[index].  The parent can be obtained by removing</span><br><span class="line">     the last set bit from the current index, i.e., index &#x3D; index - (index &amp; (-index))</span><br><span class="line">3) Return sum.</span><br></pre></td></tr></table></figure>
+<p>get_sum_tree.png<br><img src="/images/pasted-14.png" alt="get_sum_tree.png"></p>
+<ul>
+<li><p>update</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">    update(x, val): Updates the Binary Indexed Tree (BIT) by performing arr[index] +&#x3D; val</span><br><span class="line">&#x2F;&#x2F; Note that the update(x, val) operation will not change arr[].  It only makes changes to BITree[]</span><br><span class="line">1) Initialize the current index as x+1.</span><br><span class="line">2) Do the following while the current index is smaller than or equal to n.</span><br><span class="line">...a) Add the val to BITree[index]</span><br><span class="line">...b) Go to parent of BITree[index].  The parent can be obtained by incrementing</span><br><span class="line">     the last set bit of the current index, i.e., index &#x3D; index + (index &amp; (-index))</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/pasted-15.png" alt="update_tree.png"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>implementation</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Python implementation of Binary Indexed Tree </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Returns sum of arr[0..index]. This function assumes </span></span><br><span class="line"><span class="comment"># that the array is preprocessed and partial sums of </span></span><br><span class="line"><span class="comment"># array elements are stored in BITree[]. </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getsum</span><span class="params">(BITTree,i)</span>:</span> </span><br><span class="line">	s = <span class="number">0</span> <span class="comment">#initialize result </span></span><br><span class="line"></span><br><span class="line">	<span class="comment"># index in BITree[] is 1 more than the index in arr[] </span></span><br><span class="line">	i = i+<span class="number">1</span></span><br><span class="line"></span><br><span class="line">	<span class="comment"># Traverse ancestors of BITree[index] </span></span><br><span class="line">	<span class="keyword">while</span> i &gt; <span class="number">0</span>: </span><br><span class="line"></span><br><span class="line">		<span class="comment"># Add current element of BITree to sum </span></span><br><span class="line">		s += BITTree[i] </span><br><span class="line"></span><br><span class="line">		<span class="comment"># Move index to parent node in getSum View </span></span><br><span class="line">		i -= i &amp; (-i) </span><br><span class="line">	<span class="keyword">return</span> s </span><br><span class="line"></span><br><span class="line"><span class="comment"># Updates a node in Binary Index Tree (BITree) at given index </span></span><br><span class="line"><span class="comment"># in BITree. The given value 'val' is added to BITree[i] and </span></span><br><span class="line"><span class="comment"># all of its ancestors in tree. </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">updatebit</span><span class="params">(BITTree , n , i ,v)</span>:</span> </span><br><span class="line"></span><br><span class="line">	<span class="comment"># index in BITree[] is 1 more than the index in arr[] </span></span><br><span class="line">	i += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">	<span class="comment"># Traverse all ancestors and add 'val' </span></span><br><span class="line">	<span class="keyword">while</span> i &lt;= n: </span><br><span class="line"></span><br><span class="line">		<span class="comment"># Add 'val' to current node of BI Tree </span></span><br><span class="line">		BITTree[i] = v </span><br><span class="line"></span><br><span class="line">		<span class="comment"># Update index to that of parent in update View </span></span><br><span class="line">		i += i &amp; (-i) </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Constructs and returns a Binary Indexed Tree for given </span></span><br><span class="line"><span class="comment"># array of size n. </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">construct</span><span class="params">(arr, n)</span>:</span> </span><br><span class="line"></span><br><span class="line">	<span class="comment"># Create and initialize BITree[] as 0 </span></span><br><span class="line">	BITTree = [<span class="number">0</span>]*(n+<span class="number">1</span>) </span><br><span class="line"></span><br><span class="line">	<span class="comment"># Store the actual values in BITree[] using update() </span></span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> range(n): </span><br><span class="line">		updatebit(BITTree, n, i, arr[i]) </span><br><span class="line"></span><br><span class="line">	<span class="comment"># Uncomment below lines to see contents of BITree[] </span></span><br><span class="line">	<span class="comment">#for i in range(1,n+1): </span></span><br><span class="line">	<span class="comment">#	 print BITTree[i], </span></span><br><span class="line">	<span class="keyword">return</span> BITTree </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Driver code to test above methods </span></span><br><span class="line">freq = [<span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>] </span><br><span class="line">BITTree = construct(freq,len(freq)) </span><br><span class="line">print(<span class="string">"Sum of elements in arr[0..5] is "</span> + str(getsum(BITTree,<span class="number">5</span>))) </span><br><span class="line">freq[<span class="number">3</span>] += <span class="number">6</span></span><br><span class="line">updatebit(BITTree, len(freq), <span class="number">3</span>, <span class="number">6</span>) </span><br><span class="line">print(<span class="string">"Sum of elements in arr[0..5]"</span>+</span><br><span class="line">					<span class="string">" after update is "</span> + str(getsum(BITTree,<span class="number">5</span>))) </span><br><span class="line"></span><br><span class="line"><span class="comment"># This code is contributed by Raju Varshney</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><p><a href="https://www.freecodecamp.org/news/all-you-need-to-know-about-tree-data-structures-bceacb85490c/">https://www.freecodecamp.org/news/all-you-need-to-know-about-tree-data-structures-bceacb85490c/</a><br><a href="https://runestone.academy/runestone/books/published/pythonds/Trees/toctree.html">https://runestone.academy/runestone/books/published/pythonds/Trees/toctree.html</a><br><a href="https://www.cnblogs.com/xenny/p/9739600.html">https://www.cnblogs.com/xenny/p/9739600.html</a><br><a href="https://www.geeksforgeeks.org/binary-indexed-tree-or-fenwick-tree-2/">https://www.geeksforgeeks.org/binary-indexed-tree-or-fenwick-tree-2/</a></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-06-27T02:28:00.000Z" title="2020-06-27T02:28:00.000Z">2020-06-26</time><span class="level-item"> lawiet019 </span><span class="level-item"><a class="link-muted" href="/categories/technology/">technology</a></span><span class="level-item">14 minutes read (About 2162 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/06/26/common-modules-in-Python-1-collections/">common modules in Python(1) :collections</a></h1><div class="content"><p>This is a summary based on <a href="https://www.geeksforgeeks.org/">https://www.geeksforgeeks.org/</a> and  <a href="https://docs.python.org/3/library/collections.html">https://docs.python.org/3/library/collections.html</a><br><strong>1.<code>ChainMap(*maps)</code></strong></p>
+<ul>
+<li>def:A ChainMap class is provided for quickly linking a number of mappings so they can be treated as a single unit. It is often much faster than creating a new dictionary and running multiple update() calls.A ChainMap groups multiple dicts or other mappings together to create a single, updateable view. If no maps are specified, a single empty dictionary is provided so that a new chain always has at least one mapping.<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>baseline = &#123;<span class="string">'music'</span>: <span class="string">'bach'</span>, <span class="string">'art'</span>: <span class="string">'rembrandt'</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>adjustments = &#123;<span class="string">'art'</span>: <span class="string">'van gogh'</span>, <span class="string">'opera'</span>: <span class="string">'carmen'</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(ChainMap(adjustments, baseline))</span><br><span class="line">[<span class="string">'music'</span>, <span class="string">'art'</span>, <span class="string">'opera'</span>]</span><br></pre></td></tr></table></figure></li>
+<li>methods and attributes:<ul>
+<li><code>maps</code><br>This function is used to display keys with corresponding values of all the dictionaries in ChainMap.<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> collections</span><br><span class="line"></span><br><span class="line"><span class="comment"># initializing dictionaries</span></span><br><span class="line">dic1 = &#123; <span class="string">'a'</span> : <span class="number">1</span>, <span class="string">'b'</span> : <span class="number">2</span> &#125;</span><br><span class="line">dic2 = &#123; <span class="string">'b'</span> : <span class="number">3</span>, <span class="string">'c'</span> : <span class="number">4</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># initializing ChainMap</span></span><br><span class="line">chain = collections.ChainMap(dic1, dic2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># printing chainMap using maps</span></span><br><span class="line"><span class="keyword">print</span> (<span class="string">"All the ChainMap contents are : "</span>)</span><br><span class="line"><span class="keyword">print</span> (chain.maps)</span><br><span class="line"><span class="comment"># All the ChainMap contents are :</span></span><br><span class="line"><span class="comment"># [&#123;'b': 2, 'a': 1&#125;, &#123;'c': 4, 'b': 3&#125;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># printing keys using keys()</span></span><br><span class="line"><span class="keyword">print</span> (<span class="string">"All keys of ChainMap are : "</span>)</span><br><span class="line"><span class="keyword">print</span> (list(chain.keys()))</span><br><span class="line"><span class="comment">#All keys of ChainMap are :</span></span><br><span class="line"><span class="comment"># ['a', 'c', 'b']</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># printing keys using keys()</span></span><br><span class="line"><span class="keyword">print</span> (<span class="string">"All values of ChainMap are : "</span>)</span><br><span class="line"><span class="keyword">print</span> (list(chain.values()))</span><br><span class="line"><span class="comment">#All values of ChainMap are :</span></span><br><span class="line"><span class="comment">#[1, 4, 2]</span></span><br></pre></td></tr></table></figure>
+Notice： the key named “b” exists in both dictionaries, but only first dictionary key is taken as key value of “b”. Ordering is done as the dictionaries are passed in function.</li>
+<li><code>new_child()</code><br> This function adds a new dictionary in the beginning of the ChainMap. <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> collections</span><br><span class="line"></span><br><span class="line"><span class="comment"># initializing dictionaries</span></span><br><span class="line">dic1 = &#123; <span class="string">'a'</span> : <span class="number">1</span>, <span class="string">'b'</span> : <span class="number">2</span> &#125;</span><br><span class="line">dic2 = &#123; <span class="string">'b'</span> : <span class="number">3</span>, <span class="string">'c'</span> : <span class="number">4</span> &#125;</span><br><span class="line">dic3 = &#123; <span class="string">'f'</span> : <span class="number">5</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># initializing ChainMap</span></span><br><span class="line">chain = collections.ChainMap(dic1, dic2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># printing chainMap using map</span></span><br><span class="line"><span class="keyword">print</span> (<span class="string">"All the ChainMap contents are : "</span>)</span><br><span class="line"><span class="keyword">print</span> (chain.maps)</span><br><span class="line"><span class="comment">#All the ChainMap contents are :</span></span><br><span class="line"><span class="comment"># [&#123;'b': 2, 'a': 1&#125;, &#123;'b': 3, 'c': 4&#125;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># using new_child() to add new dictionary</span></span><br><span class="line">chain1 = chain.new_child(dic3)</span><br><span class="line"></span><br><span class="line"><span class="comment"># printing chainMap using map</span></span><br><span class="line"><span class="keyword">print</span> (<span class="string">"Displaying new ChainMap : "</span>)</span><br><span class="line"><span class="keyword">print</span> (chain1.maps)</span><br><span class="line"><span class="comment">#Displaying new ChainMap :</span></span><br><span class="line"><span class="comment"># [&#123;'f': 5&#125;, &#123;'b': 2, 'a': 1&#125;, &#123;'b': 3, 'c': 4&#125;]</span></span><br></pre></td></tr></table></figure></li>
+<li><code>reversed()</code><br>This function reverses the relative ordering of dictionaries in the ChainMap<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># all data are previous example</span></span><br><span class="line"><span class="comment"># displaying value associated with b before reversing</span></span><br><span class="line"><span class="keyword">print</span> (<span class="string">"Value associated with b before reversing is : "</span>,end=<span class="string">""</span>)</span><br><span class="line"><span class="keyword">print</span> (chain1[<span class="string">'b'</span>])</span><br><span class="line"><span class="comment">#Value associated with b before reversing is : 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># reversing the ChainMap</span></span><br><span class="line">chain1.maps = reversed(chain1.maps)</span><br><span class="line"></span><br><span class="line"><span class="comment"># displaying value associated with b after reversing</span></span><br><span class="line"><span class="keyword">print</span> (<span class="string">"Value associated with b after reversing is : "</span>,end=<span class="string">""</span>)</span><br><span class="line"><span class="keyword">print</span> (chain1[<span class="string">'b'</span>])</span><br><span class="line"><span class="comment">#Value associated with b after reversing is : 3</span></span><br></pre></td></tr></table></figure></li>
+<li>parents<br>Property returning a new ChainMap containing all of the maps in the current instance except the first one. This is useful for skipping the first map in the search. Use cases are similar to those for the nonlocal keyword used in nested scopes. The use cases also parallel those for the built-in super() function. A reference to d.parents is equivalent to: <code>ChainMap(*d.maps[1:])</code>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>2.<code>counter()</code></strong></p>
+<ul>
+<li><p>def: dict subclass for counting hashable objects</p>
+<ul>
+<li>Elements are counted from an iterable or initialized from another mapping<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = Counter()                           <span class="comment"># a new, empty counter</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = Counter(<span class="string">'gallahad'</span>)                 <span class="comment"># a new counter from an iterable</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = Counter(&#123;<span class="string">'red'</span>: <span class="number">4</span>, <span class="string">'blue'</span>: <span class="number">2</span>&#125;)      <span class="comment"># a new counter from a mapping</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = Counter(cats=<span class="number">4</span>, dogs=<span class="number">8</span>)             <span class="comment"># a new counter from keyword args</span></span><br></pre></td></tr></table></figure>
+Counter objects have a dictionary interface except that they return a zero count for missing items instead of raising a KeyError:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; c &#x3D; Counter([&#39;eggs&#39;, &#39;ham&#39;])</span><br><span class="line">&gt;&gt;&gt; c[&#39;bacon&#39;]                              # count of a missing element is zero</span><br><span class="line">0</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>method:</p>
+<ul>
+<li><p><code>elements()</code><br>Return an iterator over elements repeating each as many times as its count. Elements are returned in arbitrary order. If an element’s count is less than one, elements() will ignore it.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">c = Counter(a=<span class="number">4</span>, b=<span class="number">2</span>, c=<span class="number">0</span>, d=<span class="number">-2</span>)</span><br><span class="line">sorted(c.elements())</span><br><span class="line">[<span class="string">'a'</span>, <span class="string">'a'</span>, <span class="string">'a'</span>, <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'b'</span>]</span><br></pre></td></tr></table></figure></li>
+<li><p><code>most_common([n])</code><br>eturn a list of the n most common elements and their counts from the most common to the least. If n is omitted or None, most_common() returns all elements in the counter. Elements with equal counts are ordered in the order first encountered:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Counter(<span class="string">'abracadabra'</span>).most_common(<span class="number">3</span>)</span><br><span class="line">[(<span class="string">'a'</span>, <span class="number">5</span>), (<span class="string">'b'</span>, <span class="number">2</span>), (<span class="string">'r'</span>, <span class="number">2</span>)]</span><br></pre></td></tr></table></figure></li>
+<li><p><code>subtract([iterable-or-mapping])</code><br>Elements are subtracted from an iterable or from another mapping (or counter). Like dict.update() but subtracts counts instead of replacing them. Both inputs and outputs may be zero or negative.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">c = Counter(a=<span class="number">4</span>, b=<span class="number">2</span>, c=<span class="number">0</span>, d=<span class="number">-2</span>)</span><br><span class="line">d = Counter(a=<span class="number">1</span>, b=<span class="number">2</span>, c=<span class="number">3</span>, d=<span class="number">4</span>)</span><br><span class="line">c.subtract(d)</span><br><span class="line">c</span><br><span class="line">Counter(&#123;<span class="string">'a'</span>: <span class="number">3</span>, <span class="string">'b'</span>: <span class="number">0</span>, <span class="string">'c'</span>: <span class="number">-3</span>, <span class="string">'d'</span>: <span class="number">-6</span>&#125;)</span><br></pre></td></tr></table></figure></li>
+<li><p>other methods</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">sum(c.values())                 <span class="comment"># total of all counts</span></span><br><span class="line">c.clear()                       <span class="comment"># reset all counts</span></span><br><span class="line">list(c)                         <span class="comment"># list unique elements</span></span><br><span class="line">set(c)                          <span class="comment"># convert to a set</span></span><br><span class="line">dict(c)                         <span class="comment"># convert to a regular dictionary</span></span><br><span class="line">c.items()                       <span class="comment"># convert to a list of (elem, cnt) pairs</span></span><br><span class="line">Counter(dict(list_of_pairs))    <span class="comment"># convert from a list of (elem, cnt) pairs</span></span><br><span class="line">c.most_common()[:-n<span class="number">-1</span>:<span class="number">-1</span>]       <span class="comment"># n least common elements</span></span><br><span class="line">+c                              <span class="comment"># remove zero and negative counts</span></span><br><span class="line">c = Counter(a=<span class="number">3</span>, b=<span class="number">1</span>)</span><br><span class="line">d = Counter(a=<span class="number">1</span>, b=<span class="number">2</span>)</span><br><span class="line">c + d                       <span class="comment"># add two counters together:  c[x] + d[x]</span></span><br><span class="line">Counter(&#123;<span class="string">'a'</span>: <span class="number">4</span>, <span class="string">'b'</span>: <span class="number">3</span>&#125;)</span><br><span class="line">c - d                       <span class="comment"># subtract (keeping only positive counts)</span></span><br><span class="line">Counter(&#123;<span class="string">'a'</span>: <span class="number">2</span>&#125;)</span><br><span class="line">c &amp; d                       <span class="comment"># intersection:  min(c[x], d[x])</span></span><br><span class="line">Counter(&#123;<span class="string">'a'</span>: <span class="number">1</span>, <span class="string">'b'</span>: <span class="number">1</span>&#125;)</span><br><span class="line">c | d                       <span class="comment"># union:  max(c[x], d[x])</span></span><br><span class="line">Counter(&#123;<span class="string">'a'</span>: <span class="number">3</span>, <span class="string">'b'</span>: <span class="number">2</span>&#125;)</span><br></pre></td></tr></table></figure>
+<p><strong>3. <code>deque([iterable[, maxlen]])</code></strong></p>
+</li>
+<li><p>def: Deques are a generalization of stacks and queues (the name is pronounced “deck” and is short for “double-ended queue”). Deques support thread-safe, memory efficient appends and pops from either side of the deque with approximately the same O(1) performance in either direction.</p>
+</li>
+<li><p>methods:</p>
+<ul>
+<li><p><code>append(x)</code><br>Add x to the right side of the deque.</p>
+</li>
+<li><p>`appendleft(x)``<br>Add x to the left side of the deque.</p>
+</li>
+<li><p><code>clear()</code><br>Remove all elements from the deque leaving it with length 0.</p>
+</li>
+<li><p><code>copy()</code><br>Create a shallow copy of the deque.</p>
+</li>
+<li><p><code>count(x)</code><br>Count the number of deque elements equal to x.</p>
+</li>
+<li><p><code>extend(iterable)</code><br>Extend the right side of the deque by appending elements from the iterable argument.</p>
+</li>
+<li><p><code>extendleft(iterable)</code><br>Extend the left side of the deque by appending elements from iterable. Note, the series of left appends results in reversing the order of elements in the iterable argument.</p>
+</li>
+<li><p><code>index(x[, start[, stop]])</code><br>Return the position of x in the deque (at or after index start and before index stop). Returns the first match or raises ValueError if not found.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>- `insert(i, x)`
+Insert x into the deque at position i.
+If the insertion would cause a bounded deque to grow beyond maxlen, an IndexError is raised.
+
+- `pop()`
+Remove and return an element from the right side of the deque. If no elements are present, raises an IndexError.
+
+- `popleft()`
+Remove and return an element from the left side of the deque. If no elements are present, raises an IndexError.
+
+- `remove(value)`
+Remove the first occurrence of value. If not found, raises a ValueError.
+
+- `reverse()`
+Reverse the elements of the deque in-place and then return None.
+- `rotate(n=1)`
+Rotate the deque n steps to the right. If n is negative, rotate to the left.
+When the deque is not empty, rotating one step to the right is equivalent to d.appendleft(d.pop()), and rotating one step to the left is equivalent to d.append(d.popleft()).
+
+- `maxlen`
+Maximum size of a deque or None if unbounded.</code></pre><ul>
+<li><p>examples:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Bounded length deques provide functionality similar to the tail filter in Unix:</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tail</span><span class="params">(filename, n=<span class="number">10</span>)</span>:</span></span><br><span class="line">  <span class="string">'Return the last n lines of a file'</span></span><br><span class="line">  <span class="keyword">with</span> open(filename) <span class="keyword">as</span> f:</span><br><span class="line">      <span class="keyword">return</span> deque(f, n)</span><br></pre></td></tr></table></figure>
+<p><strong>4. <code>defaultdict([default_factory[, ...]])</code></strong></p>
+</li>
+<li><p>ref: Returns a new dictionary-like object. defaultdict is a subclass of the built-in dict class. . The functionality of both dictionaries and defualtdict are almost same except for the fact that defualtdict never raises a KeyError. It provides a default value for the key that does not exists.</p>
+</li>
+<li><p>methods</p>
+<ul>
+<li>defaultdict(default_factory)<br>default_factory: A function returning the default value for the dictionary defined. If this argument is absent then the dictionary raises a KeyError.<ul>
+<li><code>__missing__():</code><br>This function is used to provide the default value for the dictionary. This function takes default_factory as an argument and if this argument is None, a KeyError is raised otherwise it provides a default value for the given key. This method is basically called by the <code>__getitem__()</code> method of the dict class when the requested key is not found.<code>__getitem__()</code> raises or return the value returned by the <code>__missing__()</code>. method.<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Python program to demonstrate</span></span><br><span class="line"><span class="comment"># defaultdict</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Defining the dict</span></span><br><span class="line">d = defaultdict(<span class="keyword">lambda</span>: <span class="string">"Not Present"</span>)</span><br><span class="line">d[<span class="string">"a"</span>] = <span class="number">1</span></span><br><span class="line">d[<span class="string">"b"</span>] = <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Provides the default value  </span></span><br><span class="line"><span class="comment"># for the key</span></span><br><span class="line">print(d.__missing__(<span class="string">'a'</span>))</span><br><span class="line">print(d.__missing__(<span class="string">'d'</span>))</span><br></pre></td></tr></table></figure>
+<strong>5.<code>namedtuple()</code></strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>def: Named tuples assign meaning to each position in a tuple and allow for more readable, self-documenting code. They can be used wherever regular tuples are used, and they add the ability to access fields by name instead of position index.</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="comment"># Basic example</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>Point = namedtuple(<span class="string">'Point'</span>, [<span class="string">'x'</span>, <span class="string">'y'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p = Point(<span class="number">11</span>, y=<span class="number">22</span>)     <span class="comment"># instantiate with positional or keyword arguments</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p[<span class="number">0</span>] + p[<span class="number">1</span>]             <span class="comment"># indexable like the plain tuple (11, 22)</span></span><br><span class="line"><span class="number">33</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x, y = p                <span class="comment"># unpack like a regular tuple</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x, y</span><br><span class="line">(<span class="number">11</span>, <span class="number">22</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p.x + p.y               <span class="comment"># fields also accessible by name</span></span><br><span class="line"><span class="number">33</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p                       <span class="comment"># readable __repr__ with a name=value style</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># set default value for namedtuple</span></span><br><span class="line"></span><br><span class="line">Node = namedtuple(<span class="string">'Node'</span>, <span class="string">'val left right'</span>) Node.__new__.func_defaults = (<span class="literal">None</span>,) * len(Node._fields)</span><br></pre></td></tr></table></figure>
+<p> Operations on namedtuple() :<br> Access Operations</p>
+<ol>
+<li><p><strong>Access by index</strong> : The attribute values of namedtuple() are ordered and can be accessed using the index number unlike dictionaries which are not accessible by index.</p>
+</li>
+<li><p><strong>Access by keyname</strong> : Access by keyname is also allowed as in dictionaries.</p>
+</li>
+<li><p><strong>using getattr()</strong> :- This is yet another way to access the value by giving namedtuple and key value as its argument.</p>
+</li>
+</ol>
+</li>
+<li><p>methods:</p>
+<ul>
+<li><code>_make</code><br>Class method that makes a new instance from an existing sequence or iterable.<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Basic example</span></span><br><span class="line">Point = namedtuple(<span class="string">'Point'</span>, [<span class="string">'x'</span>, <span class="string">'y'</span>])</span><br><span class="line">p = Point(<span class="number">11</span>, y=<span class="number">22</span>)     <span class="comment"># instantiate with positional or keyword arguments</span></span><br></pre></td></tr></table></figure></li>
+<li><code>_asdict()</code><br>Return a new dict which maps field names to their corresponding values<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p = Point(x=<span class="number">11</span>, y=<span class="number">22</span>)</span><br><span class="line">p._asdict()</span><br><span class="line"><span class="comment"># &#123;'x': 11, 'y': 22&#125;</span></span><br></pre></td></tr></table></figure></li>
+<li><code>_replace(**kwargs)</code><br>Return a new instance of the named tuple replacing specified fields with new values:<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p = Point(x=<span class="number">11</span>, y=<span class="number">22</span>)</span><br><span class="line">p._replace(x=<span class="number">33</span>)</span><br><span class="line"><span class="comment"># Point(x=33, y=22)</span></span><br></pre></td></tr></table></figure></li>
+<li><code>_fields</code> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p._fields            <span class="comment"># view the field names</span></span><br><span class="line"><span class="comment"># ('x', 'y')</span></span><br></pre></td></tr></table></figure>
+<strong>7.<code>OrderedDict()</code></strong></li>
+</ul>
+</li>
+<li><p>def: Ordered dictionaries are just like regular dictionaries but have some extra capabilities relating to ordering operations. They have become less important now that the built-in dict class gained the ability to remember insertion order</p>
+</li>
+<li><p>methods:</p>
+<ul>
+<li><code>popitem(last=True)</code><br>the popitem() method for ordered dictionaries returns and removes a (key, value) pair. The pairs are returned in LIFO order if last is true or FIFO order if false.</li>
+<li><code>move_to_end(key, last=True)</code><br>Move an existing key to either end of an ordered dictionary. The item is moved to the right end if last is true (the default) or to the beginning if last is false. Raises KeyError if the key does not exist:<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">d = OrderedDict.fromkeys(<span class="string">'abcde'</span>)</span><br><span class="line">d.move_to_end(<span class="string">'b'</span>)</span><br><span class="line"><span class="string">''</span>.join(d.keys())</span><br><span class="line"><span class="comment"># 'acdeb'</span></span><br><span class="line">d.move_to_end(<span class="string">'b'</span>, last=<span class="literal">False</span>)</span><br><span class="line"><span class="string">''</span>.join(d.keys())</span><br><span class="line"><span class="comment"># 'bacde'</span></span><br></pre></td></tr></table></figure>
+<strong>8.<code>UserDict([initialdata])</code></strong></li>
+</ul>
+</li>
+<li><p>def: Python supports a dictionary like a container called UserDict present in the collections module. This class acts as a wrapper class around the dictionary objects. This class is useful when one wants to create a dictionary of their own with some modified functionality or with some new functionality. It can be considered as a way of adding new behaviors for the dictionary. This class takes a dictionary instance as an argument and simulates a dictionary that is kept in a regular dictionary. The dictionary is accessible by the data attribute of this class.</p>
+</li>
+<li><p>example:<br>Let’s create a class inherting from UserDict to implement a customised dictionary.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> UserDict</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"><span class="comment"># Creating a Dictionary where</span></span><br><span class="line"><span class="comment"># deletion is not allowed</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyDict</span><span class="params">(UserDict)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Function to stop deleltion</span></span><br><span class="line">    <span class="comment"># from dictionary</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__del__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">raise</span> RuntimeError(<span class="string">"Deletion not allowed"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Function to stop pop from  </span></span><br><span class="line">    <span class="comment"># dictionary</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pop</span><span class="params">(self, s = None)</span>:</span></span><br><span class="line">        <span class="keyword">raise</span> RuntimeError(<span class="string">"Deletion not allowed"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Function to stop popitem  </span></span><br><span class="line">    <span class="comment"># from Dictionary</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">popitem</span><span class="params">(self, s = None)</span>:</span></span><br><span class="line">        <span class="keyword">raise</span> RuntimeError(<span class="string">"Deletion not allowed"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Driver's code</span></span><br><span class="line">d = MyDict(&#123;<span class="string">'a'</span>:<span class="number">1</span>,</span><br><span class="line">    <span class="string">'b'</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="string">'c'</span>: <span class="number">3</span>&#125;)</span><br><span class="line"></span><br><span class="line">print(<span class="string">"Original Dictionary"</span>)</span><br><span class="line">print(d)</span><br><span class="line"></span><br><span class="line">d.pop(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>9.<code>UserList([list])</code></strong></p>
+<ul>
+<li>def:This class acts as a wrapper around list objects. It is a useful base class for your own list-like classes which can inherit from them and override existing methods or add new ones. In this way, one can add new behaviors to lists.The need for this class has been partially supplanted by the ability to subclass directly from list; however, this class can be easier to work with because the underlying list is accessible as an attribute.</li>
+</ul>
+</li>
+</ul>
+<p><strong>10.<code>UserString(seq)</code></strong></p>
+<ul>
+<li>def: Class that simulates a string object. The instance’s content is kept in a regular string object, which is accessible via the data attribute of UserString instances. The instance’s contents are initially set to a copy of seq. The seq argument can be any object which can be converted into a string using the built-in str() function.</li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-06-16T22:12:00.000Z" title="2020-06-16T22:12:00.000Z">2020-06-16</time><span class="level-item"> lawiet019 </span><span class="level-item"><a class="link-muted" href="/categories/technology/">technology</a></span><span class="level-item">6 minutes read (About 831 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/06/16/Dijkstra-s-algorithm/">Dijkstra&#039;s algorithm </a></h1><div class="content"><h2 id="overview"><a href="#overview" class="headerlink" title="overview"></a>overview</h2><p>Dijkstra’s algorithm (or Dijkstra’s Shortest Path First algorithm, SPF algorithm) is an algorithm for finding the shortest paths between nodes in a graph.(Dijkstra algorithm is mainly used to find the minimum path from any point in a digraph whose weight is not negative to any other node (when two points are connected with each other).</p>
+<h2 id="Dijkstra’s-algorithm-vs-BFS"><a href="#Dijkstra’s-algorithm-vs-BFS" class="headerlink" title="Dijkstra’s algorithm  vs BFS"></a>Dijkstra’s algorithm  vs BFS</h2><p>Breadth first search is suitable for unweighted graph to find  the shortest path of two points. Dijkstras algorithm, which is suitable for weighted graph to find the path with the least total weight.</p>
+<h2 id="steps-of-algorithms"><a href="#steps-of-algorithms" class="headerlink" title="steps of algorithms"></a>steps of algorithms</h2><ol>
+<li>A node <code>s</code> in the graph is given as the starting point.</li>
+<li>Given an array <code>dist []</code> to store the distance from all nodes in the graph to <code>s</code>. Initialize <code>dist [s]</code> to 0. For other nodes <code>v</code> in the graph, the initial <code>dist [v]</code> is infinite. The significance of initializing to infinity is that we assume that all other nodes are not connected with s in the current situation. With the implementation of the algorithm, <code>dist [v]</code> will save the shortest path distance from <code>s</code> to <code>v</code> in the graph.</li>
+<li>Given a minimum heap, record it as <code>Q</code>. The top of the stack  is the nearest node to s and the corresponding distance. Put <code>(s, 0)</code> in the heap.</li>
+<li>Given a set, record it as <code>S</code>, and save all the visited nodes. Set it is initially empty. Based on the properties of Dijkstra algorithm, we always traverse every node with the shortest path, so for any node, once we have visited it, it means that we have got the shortest path from <code>s</code> to this node.</li>
+<li>When <code>Q</code> is not empty, take out the element <code>(v, dist [v])</code> at the top of the heap, that is, the node v closest to <code>s</code> and its distance <code>dist [v]</code>.If <code>v</code> is in <code>S</code>, it represents the shortest path that we have visited <code>v</code>. Then skip the current v and repeat step 1.Otherwise, put <code>v</code> in <code>S</code>.</li>
+<li>For each node t adjacent to v:<br>If <code>dist [v] + weight (v, t) &lt; dist [t]</code>, update <code>dist [t] = dist [v] + weight (v, t)</code>. At the same time, put <code>(t, dist [t])</code> into <code>Q</code>.<br>Otherwise, do nothing.</li>
+<li>When the algorithm is finished, the weight value (or length) of the shortest path from each node except s in the graph to <code>s</code> is saved in <code>dist []</code>. If there is no connection path from <code>s</code> to <code>v</code>, <code>dist [v] = ∞</code>.</li>
+</ol>
+<h2 id="the-correctness-of-the-algorithm"><a href="#the-correctness-of-the-algorithm" class="headerlink" title="the correctness of the algorithm"></a>the correctness of the algorithm</h2><p>Suppose that <code>dist [v]</code> stores the shortest path from the starting point <code>s</code> to <code>v</code> for each node <code>v</code> that has been visited.<br>When the algorithm is initialized, only <code>dist [s] = 0</code> is included in<code>dist []</code>, and its correctness is obvious.</p>
+<p>For the rest <code>n-1</code> nodes, if <code>u</code> has been accessed and <code>v</code> has not been accessed, and there is an edge <code>u - &gt; v</code> between <code>u</code> and <code>v</code>, whose weight is weight <code>(u, v)</code>, then there must be <code>dist [v] = dist [u] + weight (u, v)</code>. Otherwise, if there is another shorter path <code>dist [t]</code> satisfying <code>dist [t] + weight (t, v)</code>, then according to the above algorithm, t must be accessed before u, which conflicts with our current assumption. The conclusion is valid for all the remaining nodes.<br>Therefore, Dijkstra algorithm must be able to give the shortest path from the starting point to all other nodes .</p>
+<h2 id="examples"><a href="#examples" class="headerlink" title="examples:"></a>examples:</h2><p>a video from Youtube<br><a href="https://www.youtube.com/watch?v=pVfj6mxhdMw"><img src="https://i.ytimg.com/an_webp/pVfj6mxhdMw/mqdefault_6s.webp?du=3000&sqp=CMj_n_cF&rs=AOn4CLChjFa5pKK4y1TQtg-4m9feSO4prQ" alt="IMAGE ALT TEXT HERE"></a></p>
+<h2 id="implement-in-Python"><a href="#implement-in-Python" class="headerlink" title="implement in Python"></a>implement in Python</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> heapq</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate_distances</span><span class="params">(graph, starting_vertex)</span>:</span></span><br><span class="line">    distances = &#123;vertex: float(<span class="string">'infinity'</span>) <span class="keyword">for</span> vertex <span class="keyword">in</span> graph&#125;</span><br><span class="line">    distances[starting_vertex] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    pq = [(<span class="number">0</span>, starting_vertex)]</span><br><span class="line">    <span class="keyword">while</span> len(pq) &gt; <span class="number">0</span>:</span><br><span class="line">        current_distance, current_vertex = heapq.heappop(pq)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Nodes can get added to the priority queue multiple times. We only</span></span><br><span class="line">        <span class="comment"># process a vertex the first time we remove it from the priority queue.</span></span><br><span class="line">        <span class="keyword">if</span> current_distance &gt; distances[current_vertex]:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> neighbor, weight <span class="keyword">in</span> graph[current_vertex].items():</span><br><span class="line">            distance = current_distance + weight</span><br><span class="line"></span><br><span class="line">            <span class="comment"># Only consider this new path if it's better than any path we've</span></span><br><span class="line">            <span class="comment"># already found.</span></span><br><span class="line">            <span class="keyword">if</span> distance &lt; distances[neighbor]:</span><br><span class="line">                distances[neighbor] = distance</span><br><span class="line">                heapq.heappush(pq, (distance, neighbor))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> distances</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">example_graph = &#123;</span><br><span class="line">    <span class="string">'U'</span>: &#123;<span class="string">'V'</span>: <span class="number">2</span>, <span class="string">'W'</span>: <span class="number">5</span>, <span class="string">'X'</span>: <span class="number">1</span>&#125;,</span><br><span class="line">    <span class="string">'V'</span>: &#123;<span class="string">'U'</span>: <span class="number">2</span>, <span class="string">'X'</span>: <span class="number">2</span>, <span class="string">'W'</span>: <span class="number">3</span>&#125;,</span><br><span class="line">    <span class="string">'W'</span>: &#123;<span class="string">'V'</span>: <span class="number">3</span>, <span class="string">'U'</span>: <span class="number">5</span>, <span class="string">'X'</span>: <span class="number">3</span>, <span class="string">'Y'</span>: <span class="number">1</span>, <span class="string">'Z'</span>: <span class="number">5</span>&#125;,</span><br><span class="line">    <span class="string">'X'</span>: &#123;<span class="string">'U'</span>: <span class="number">1</span>, <span class="string">'V'</span>: <span class="number">2</span>, <span class="string">'W'</span>: <span class="number">3</span>, <span class="string">'Y'</span>: <span class="number">1</span>&#125;,</span><br><span class="line">    <span class="string">'Y'</span>: &#123;<span class="string">'X'</span>: <span class="number">1</span>, <span class="string">'W'</span>: <span class="number">1</span>, <span class="string">'Z'</span>: <span class="number">1</span>&#125;,</span><br><span class="line">    <span class="string">'Z'</span>: &#123;<span class="string">'W'</span>: <span class="number">5</span>, <span class="string">'Y'</span>: <span class="number">1</span>&#125;,</span><br><span class="line">&#125;</span><br><span class="line">print(calculate_distances(example_graph, <span class="string">'X'</span>))</span><br></pre></td></tr></table></figure>
+<h2 id="complexity"><a href="#complexity" class="headerlink" title="complexity"></a>complexity</h2><p>Suppose there are <code>E</code> edges and <code>N</code> nodes in the graph.<br>Time complexity: <code>O (ElogE)</code>. Because the minimum heap used is up to the <code>O (logE)</code> size,and we extract each element from it once.<br>Spatial complexity: <code>O (N + E)</code>. Where o (N) is the space used to store dist. <code>O (E)</code> is the space used to store the adjacency list and the minimum heap of a graph.</p>
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><p><a href="https://www.jianshu.com/p/cd97f8197f18">https://www.jianshu.com/p/cd97f8197f18</a></p>
+<p><a href="https://bradfieldcs.com/algos/graphs/dijkstras-algorithm/">https://bradfieldcs.com/algos/graphs/dijkstras-algorithm/</a></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-06-15T14:16:00.000Z" title="2020-06-15T14:16:00.000Z">2020-06-15</time><span class="level-item"> lawiet019 </span><span class="level-item"><a class="link-muted" href="/categories/technology/">technology</a></span><span class="level-item">4 minutes read (About 546 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/06/15/Levenshtein-Distance-minimum-edit-distance/">Levenshtein Distance/ minimum edit distance </a></h1><div class="content"><p>Since I am not  familar with dynamic programming so I use an example to delve into this topic </p>
+<h2 id="what-is-dynamic-programming"><a href="#what-is-dynamic-programming" class="headerlink" title="what is dynamic programming"></a>what is dynamic programming</h2><p>Dynamic Programming is mainly an optimization over plain recursion. Wherever we see a recursive solution that has repeated calls for same inputs, we can optimize it using Dynamic Programming. The idea is to simply store the results of subproblems, so that we do not have to re-compute them when needed later. </p>
+<h2 id="what-is-Levenshtein-Distance"><a href="#what-is-Levenshtein-Distance" class="headerlink" title="what is Levenshtein Distance"></a>what is Levenshtein Distance</h2><p>Levenshtein distance (LD) is a measure of the similarity between two strings, which we will refer to as the source string (s) and the target string (t). the Levenshtein distance between two words is the minimum number of single-character edits (insertions, deletions or substitutions) required to change one word into the other. For example,<br>If <code>s</code> is <code>&quot;test&quot;</code>and <code>t</code> is <code>&quot;test&quot;</code>, then LD(s,t) = 0, because no transformations are needed. The strings are already identical.<br>If <code>s</code> is <code>&quot;test&quot;</code> and <code>t</code> is <code>&quot;tent&quot;</code>, then LD(s,t) = 1, because one substitution (change “s” to “n”) is sufficient to transform s into t.</p>
+<h2 id="the-difference-between-Levenshtein-Distance-and-Hamming-distance"><a href="#the-difference-between-Levenshtein-Distance-and-Hamming-distance" class="headerlink" title="the difference between Levenshtein Distance and Hamming distance"></a>the difference between Levenshtein Distance and Hamming distance</h2><p>the Hamming distance between two strings of equal length is the number of positions at which the corresponding symbols are different.If the strings are the same size, the Hamming distance is an upper bound on the Levenshtein distance. </p>
+<h2 id="how-to-use-dynamic-programming-to-solve-the-problem"><a href="#how-to-use-dynamic-programming-to-solve-the-problem" class="headerlink" title="how to use dynamic programming to solve the problem"></a>how to use dynamic programming to solve the problem</h2><p>we should construct a matrix based on the length of source string and target string. The problem we should focus on is in which direction we could solve it. And the induction formula of the matirx.<br>Here is an example I saw on the Youtube </p>
+<blockquote>
+<p>the source string : abcdef<br>the target string : agced </p>
+</blockquote>
+<p>  from there we can construct a matrix as below </p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>d</th>
+<th>e</th>
+<th>f</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>a</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>g</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>c</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>d</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p> The empty box represent null value<br> we could start to fill the matrix by fullfill the first column and first row. to understand the value in the matrix, the value of (2,3) is how many steps we minimally need to convert <code>ab</code> to <code>a</code></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>d</th>
+<th>e</th>
+<th>f</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td>a</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>g</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>c</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>e</td>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>d</td>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p> then we go to the induction part<br> after observation, we found the formula<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if row(a) &#x3D;&#x3D; column(b):</span><br><span class="line">   cost &#x3D; 0</span><br><span class="line">else:</span><br><span class="line">   cost &#x3D; 1</span><br><span class="line">v(a,b) &#x3D; min(v(a-1,b)+1, v(a-1,b-1)+cost,v(a,b-1)+1)</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>v(a-1,b): convert s[:b] to t[:a-1] in previous steps<br> v(a,b-1):convert s[:b-1] to t[:a] in previous steps<br> v(a-1,b-1):convert s[:b-1] to t[:a-1] in previous steps</p>
+</blockquote>
+<p> v represents the value of a certain entry and first element a is the index of row while the second element b is the index of column. </p>
+<h2 id="implement-it-in-Python"><a href="#implement-it-in-Python" class="headerlink" title="implement it in Python"></a>implement it in Python</h2> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">LD</span><span class="params">(source,target)</span>:</span></span><br><span class="line">    ori_mat  = [[<span class="number">-1</span>] *(len(source)+<span class="number">1</span>) <span class="keyword">for</span> i <span class="keyword">in</span> range(len(target)+<span class="number">1</span>)]</span><br><span class="line">    <span class="comment"># init</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(source)+<span class="number">1</span>):</span><br><span class="line">        ori_mat[<span class="number">0</span>][i] = i</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(len(target)+<span class="number">1</span>):</span><br><span class="line">        ori_mat[j][<span class="number">0</span>] = j</span><br><span class="line">    print(ori_mat)</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>,len(target)+<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,len(source)+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> source[i<span class="number">-1</span>] == target[j<span class="number">-1</span>]:</span><br><span class="line">                cost = <span class="number">0</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                cost =<span class="number">1</span></span><br><span class="line">            ori_mat[j][i] = min(ori_mat[j<span class="number">-1</span>][i]+<span class="number">1</span>,ori_mat[j][i<span class="number">-1</span>]+<span class="number">1</span>,ori_mat[j<span class="number">-1</span>][i<span class="number">-1</span>]+cost)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ori_mat[<span class="number">-1</span>][<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-06-11T02:33:00.000Z" title="2020-06-11T02:33:00.000Z">2020-06-10</time><span class="level-item"> lawiet019 </span><span class="level-item"><a class="link-muted" href="/categories/technology/">technology</a></span><span class="level-item">7 minutes read (About 1061 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/06/10/regular-expression-in-python/">regular expression in python</a></h1><div class="content"><p>The materials are mainly based on <a href="https://deerchao.cn/tutorials/regex/regex.htm">https://deerchao.cn/tutorials/regex/regex.htm</a></p>
+<h2 id="the-online-tool"><a href="#the-online-tool" class="headerlink" title="the online tool"></a>the online tool</h2><p><a href="https://regex101.com/">https://regex101.com/</a></p>
+<h2 id="basic-knowledge-of-regular-expression"><a href="#basic-knowledge-of-regular-expression" class="headerlink" title="basic knowledge of regular expression"></a>basic knowledge of regular expression</h2><h3 id="Quantifiers"><a href="#Quantifiers" class="headerlink" title="Quantifiers"></a>Quantifiers</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A*</td>
+<td>A sequence of zero or more ‘A’</td>
+</tr>
+<tr>
+<td>A+</td>
+<td>A sequence of one  or more ‘A’</td>
+</tr>
+<tr>
+<td>A?</td>
+<td>A sequence of one  or zero ‘A’</td>
+</tr>
+<tr>
+<td>A{2}</td>
+<td>A sequence of exactly two ‘A’}</td>
+</tr>
+<tr>
+<td>A{2,5}</td>
+<td>A sequence of two through five (inclusive) ‘A’</td>
+</tr>
+<tr>
+<td>A{2,}</td>
+<td>A sequence of two or more ‘A’</td>
+</tr>
+</tbody></table>
+<h3 id="Metacharacters"><a href="#Metacharacters" class="headerlink" title="Metacharacters"></a>Metacharacters</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.</td>
+<td>Any single character</td>
+</tr>
+<tr>
+<td>^</td>
+<td>Match the beginning of a string</td>
+</tr>
+<tr>
+<td>$</td>
+<td>Match the end of a string</td>
+</tr>
+<tr>
+<td>^foobar$</td>
+<td>A string that consists exactly of the word ‘foobar’</td>
+</tr>
+<tr>
+<td>\</td>
+<td>Quote the next metacharacter</td>
+</tr>
+<tr>
+<td>\ $</td>
+<td>A ‘$’</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>Character class</td>
+</tr>
+<tr>
+<td>[0-9]</td>
+<td>A   number between ‘0’ and ‘9’</td>
+</tr>
+<tr>
+<td>[a-f]</td>
+<td>A   lower case letter between ‘a’ and ‘f’</td>
+</tr>
+<tr>
+<td>[G-Z]</td>
+<td>An  upper case letter between ‘G’ and ‘Z’</td>
+</tr>
+<tr>
+<td>[^a-z]</td>
+<td>Any character except characters between ‘a’ and ‘z’</td>
+</tr>
+<tr>
+<td>[0-9a-zA-Z-]</td>
+<td>A   hyphen or an alphanumeric character</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>match letters or numbers or underscores or Chines characters</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>matches any whitespace</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>match numbers</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>start or end of matching words</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>match any characters that are not letters, numbers, underscores or Chinese characters</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>matches any character that is not a space character</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>match any non numeric character</td>
+</tr>
+<tr>
+<td>\B</td>
+<td>matching is not at the beginning or end of a word</td>
+</tr>
+<tr>
+<td>\A</td>
+<td>Matches if the specified characters are at the start of a string</td>
+</tr>
+</tbody></table>
+<h3 id="the-difference-between-vs-b"><a href="#the-difference-between-vs-b" class="headerlink" title="the difference between ^$ vs \b"></a>the difference between <code>^$</code> vs <code>\b</code></h3><p><code>^</code>Find the start of a line, $find the end of a line (without setting singleline)<br><code>\b</code> match the beginning and end of a word (boundary)</p>
+<h3 id="branch-conditions"><a href="#branch-conditions" class="headerlink" title="branch conditions"></a>branch conditions</h3><p>use &#124; to meet branch conditions. That is to say,There are several rules. If any one of them is satisfied, it should be regarded as a match<br><code>\(0\d{2}\)[- ]?\d{8}|0\d{2}[- ]?\d{8}</code> This expression matches the phone number of the 3-digit area code, where the area code can be enclosed in parentheses or not used. The area code and the local number can be separated by hyphens or spaces, or there can be no interval. You can try to extend this expression to also support 4-bit area code by using branching conditions.</p>
+<h3 id="group"><a href="#group" class="headerlink" title="group"></a>group</h3><p><code>()</code>: it  was mainly used for repeating multiple characters<br>(\d {1,3} .) {3} \d {1,3} is a simple IP address matching expression. To understand this expression, analyze it in the following order: \d {1,3} matches 1 to 3 digits, (\d {1,3} .) {3} matches 3 digits plus an English period (the whole group is the group) three times, and finally adds a one to three digits (\d{1,3})</p>
+<h3 id="backreference"><a href="#backreference" class="headerlink" title="backreference"></a>backreference</h3><p>After specifying a subexpression with parentheses, the text matching the subexpression (that is, the content captured by this grouping) can be further processed in the expression. By default, each group will automatically have a group number. The rule is: from left to right, the group number of the first group is 1, the second group is 2, and so on. Backward references are used to repeatedly search for text that matches a previous group. For example, <code>\1</code> represents the text matched by group 1.</p>
+<ul>
+<li>capture</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>expression</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(exp)</td>
+<td>match exp and capture text into an automatically named group</td>
+</tr>
+<tr>
+<td>(?<name>exp)</td>
+<td>match exp, and capture the text to the group named name, or write (? ‘name’exp)</td>
+</tr>
+<tr>
+<td>(?: exp)</td>
+<td>match exp, do not capture matching text, and do not assign group number to this group</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Zero-width assertion<br>The next four are used to find something before or after something (but not including it), that is, they are used to specify a location like <code>\b, ^, $</code>, which should meet certain conditions (i.e. assertions), so they are also called zero width assertions</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>expression</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(?= exp)</td>
+<td>match the position in front of exp</td>
+</tr>
+<tr>
+<td>(? &lt; = exp)</td>
+<td>match position after exp</td>
+</tr>
+<tr>
+<td>(?! exp)</td>
+<td>match is not followed by exp</td>
+</tr>
+<tr>
+<td>(? &lt;! exp)</td>
+<td>matches positions that are not exp before</td>
+</tr>
+</tbody></table>
+<p><code>\b\w+(?=ing\b)</code>:Matches the front part of a word ending in ing (except for ing), such as I’m singing while you’re dancing. It matches sing and danc</p>
+<p><code>(?&lt;=\bre)\w+\b</code> will match the second half of the word beginning with re (except for re), for example, when looking for reading a book, it will match ading.</p>
+<p><code>\d{3}(?!\d)</code>Match three digits, and the three digits cannot be followed by a number</p>
+<p><code>(?&lt;![a-z])\d{7}</code>:Match seven digits that are not preceded by lowercase letters.</p>
+<h3 id="comment"><a href="#comment" class="headerlink" title="comment"></a>comment</h3><p><code>(?#comment)</code></p>
+<h3 id="Greed-and-laziness"><a href="#Greed-and-laziness" class="headerlink" title="Greed and laziness"></a>Greed and laziness</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>*?</td>
+<td>repeat any time, but as few as possible</td>
+</tr>
+<tr>
+<td>+?</td>
+<td>repeat once or more, but as little as possible</td>
+</tr>
+<tr>
+<td>??</td>
+<td>Repeat 0 or 1 time, but as little as possible</td>
+</tr>
+<tr>
+<td>{n, m}?</td>
+<td>Repeat n to m times, but as little as possible</td>
+</tr>
+<tr>
+<td>{n,}?</td>
+<td>Repeat more than n times, but as few as possible</td>
+</tr>
+</tbody></table>
+<h2 id="how-to-implement-regular-expression-in-python"><a href="#how-to-implement-regular-expression-in-python" class="headerlink" title="how to implement regular expression in python"></a>how to implement regular expression in python</h2><ul>
+<li>re module (built-in)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>expression</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>findall:</td>
+<td>Returns a list containing all matches</td>
+</tr>
+<tr>
+<td>search:</td>
+<td>Returns a Match object if there is a match anywhere in the string</td>
+</tr>
+<tr>
+<td>split</td>
+<td>Returns a list where the string has been split at each match</td>
+</tr>
+<tr>
+<td>sub</td>
+<td>Replaces one or many matches with a string</td>
+</tr>
+</tbody></table>
+<ul>
+<li>re.findall(pattern, string)</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Program to extract numbers from a string</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">string = <span class="string">'hello 12 hi 89. Howdy 34'</span></span><br><span class="line">pattern = <span class="string">'\d+'</span></span><br><span class="line"></span><br><span class="line">result = re.findall(pattern, string)</span><br><span class="line">print(result)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Output: ['12', '89', '34']</span></span><br></pre></td></tr></table></figure>
+
+<p>when findall meets group():</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">string = <span class="string">"1--3--4-5--6--7"</span></span><br><span class="line">pattern = <span class="string">"([-]*)([0-9]+)"</span></span><br><span class="line">result =  re.findall(pattern,string)</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># Output: [('', '1'), ('--', '3'), ('--', '4'), ('-', '5'), ('--', '6'), ('--', '7')]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>re.split(pattern, string,[maxsplit])<br>maxsplit:maximum number of splits that will occur</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">string = <span class="string">'Twelve:12 Eighty nine:89 Nine:9.'</span></span><br><span class="line">pattern = <span class="string">'\d+'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># maxsplit = 1</span></span><br><span class="line"><span class="comment"># split only at the first occurrence</span></span><br><span class="line">result = re.split(pattern, string, <span class="number">1</span>)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>re.sub()</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Program to remove all whitespaces</span></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="comment"># multiline string</span></span><br><span class="line">string = <span class="string">'abc 12\</span></span><br><span class="line"><span class="string">de 23 \n f45 6'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># matches all whitespace characters</span></span><br><span class="line">pattern = <span class="string">'\s+'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># empty string</span></span><br><span class="line">replace = <span class="string">''</span></span><br><span class="line"></span><br><span class="line">new_string = re.sub(pattern, replace, string)</span><br><span class="line">print(new_string)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Output: abc12de23f456</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>re.subn()<br>The re.subn() is similar to re.sub() expect it returns a tuple of 2 items containing the new string and the number of substitutions made.</p>
+</li>
+<li><p>re.search(pattern, str)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">txt = <span class="string">"The rain in Spain"</span></span><br><span class="line">x = re.search(<span class="string">"\s"</span>, txt)</span><br><span class="line"></span><br><span class="line">print(<span class="string">"The first white-space character is located in position:"</span>, x.start())</span><br></pre></td></tr></table></figure>
+<p>search will return <code>Match obejct</code></p>
+</li>
+<li><p>match.group()<br>The group() method returns the part of the string where there is a match.</p>
+</li>
+<li><p>match.start()<br>The start() function returns the index of the start of the matched substring</p>
+</li>
+<li><p>match.end()<br>end() returns the end index of the matched substring.</p>
+</li>
+<li><p>match.span()<br>function returns a tuple containing start and end index of the matched part.</p>
+</li>
+<li><p>match.string<br>returns the string passed into the function</p>
+<p>no need use re.compile</p>
+</li>
+</ul>
+</div></article></div><nav class="pagination is-centered mt-4" role="navigation" aria-label="pagination"><div class="pagination-previous is-invisible is-hidden-mobile"><a href="/tags/python/page/0/">Previous</a></div><div class="pagination-next"><a href="/tags/python/page/2/">Next</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link is-current" href="/tags/python/">1</a></li><li><a class="pagination-link" href="/tags/python/page/2/">2</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="is-rounded" src="/img/avatar.jpeg" alt="koko"></figure><p class="title is-size-4 is-block line-height-inherit">koko</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Troy, NY</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">17</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Category</p><a href="/categories"><p class="title">1</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">13</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/lawiet019" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/lawiet019"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/technology/"><span class="level-start"><span class="level-item">technology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">Recent</h3><article class="media"><div class="media-content size-small"><p><time dateTime="2020-07-22T17:48:00.000Z">2020-07-22</time></p><p class="title is-6"><a class="link-muted" href="/2020/07/22/Learning-of-wireshark/">Learning of wireshark</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/technology/">technology</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-07-12T16:18:00.000Z">2020-07-12</time></p><p class="title is-6"><a class="link-muted" href="/2020/07/12/common-modules-in-python-6-bisect/">common_modules_in_python(6):bisect</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/technology/">technology</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-07-12T16:05:00.000Z">2020-07-12</time></p><p class="title is-6"><a class="link-muted" href="/2020/07/12/common-modules-in-python-5-math/">common_modules_in_python(5):math</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/technology/">technology</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-07-06T17:52:00.000Z">2020-07-06</time></p><p class="title is-6"><a class="link-muted" href="/2020/07/06/common-modules-in-python-4/">common_modules_in_python(4):itertools</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/technology/">technology</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-07-06T16:04:00.000Z">2020-07-06</time></p><p class="title is-6"><a class="link-muted" href="/2020/07/06/common-modules-in-python-3/">common_modules_in_python(3):heapq</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/technology/">technology</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2020/07/"><span class="level-start"><span class="level-item">July 2020</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/06/"><span class="level-start"><span class="level-item">June 2020</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/05/"><span class="level-start"><span class="level-item">May 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Graph/"><span class="tag">Graph</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/algorithm/"><span class="tag">algorithm</span><span class="tag is-grey-lightest">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bit-manipulation/"><span class="tag">bit manipulation</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/collections/"><span class="tag">collections</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dynamic-programming/"><span class="tag">dynamic programming</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hexo/"><span class="tag">hexo</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/linked-list/"><span class="tag">linked list</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag is-grey-lightest">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/regular-expression/"><span class="tag">regular expression</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/sort/"><span class="tag">sort</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/sorting/"><span class="tag">sorting</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tree/"><span class="tag">tree</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe to Updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button is-primary" type="submit" value="Subscribe"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/favicon.png" alt="lawilet&#039;s website" height="28"></a><p class="size-small"><span>&copy; 2020 lawiet019</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            site: {
+                url: 'http://law-liet.com',
+                external_link: {"enable":true,"exclude":[]}
+            },
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to Top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
         });</script></body></html>
