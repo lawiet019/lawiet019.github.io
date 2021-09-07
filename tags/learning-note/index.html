@@ -167,7 +167,47 @@ binds each worker process to a separate CPU,<br><br/></li>
 </li>
 </ol>
 <p><code>stub_status</code> will make basic status information will be accessible from the surrounding location.<br>In that case, we could visit <code>www.nginx_test1.com/stub_status</code> (we set the server_name is <code>www.nginx_test1.com</code>)<br>And the page look like:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Active connections: 1</span><br><span class="line">server accepts handled requests</span><br><span class="line"> 2 2 4</span><br><span class="line">Reading: 0 Writing: 1 Waiting: 0</span><br></pre></td></tr></table></figure></p>
-<p>It contains following status information<br>|status information|details|<br>|-|-|<br>|Active connections|The current number of active client connections including Waiting connections.|<br>|accepts|The total number of accepted client connections.|<br>|handled|The total number of handled connections. Generally, the parameter value is the same as accepts unless some resource limits have been reached (for example, the worker_connections limit).|<br>|requests|The total number of client requests.|<br>|Reading|The current number of connections where nginx is reading the request header.|<br>|Writing|The current number of connections where nginx is writing the response back to the client.|<br>|Waiting|The current number of idle client connections waiting for a request|</p>
+<p>It contains following status information</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>status information</th>
+<th>details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Active connections</td>
+<td>The current number of active client connections including Waiting connections.</td>
+</tr>
+<tr>
+<td>accepts</td>
+<td>The total number of accepted client connections.</td>
+</tr>
+<tr>
+<td>handled</td>
+<td>The total number of handled connections. Generally, the parameter value is the same as accepts unless some resource limits have been reached (for example, the worker_connections limit).</td>
+</tr>
+<tr>
+<td>requests</td>
+<td>The total number of client requests.</td>
+</tr>
+<tr>
+<td>Reading</td>
+<td>The current number of connections where nginx is reading the request header.</td>
+</tr>
+<tr>
+<td>Writing</td>
+<td>The current number of connections where nginx is writing the response back to the client.</td>
+</tr>
+<tr>
+<td>Waiting</td>
+<td>The current number of idle client connections waiting for a request</td>
+</tr>
+</tbody>
+</table>
+</div>
 <ul>
 <li><strong>refer</strong></li>
 </ul>
