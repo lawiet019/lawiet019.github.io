@@ -402,7 +402,7 @@ binds each worker process to a separate CPU,<br><br/></li>
 <li><strong>refer</strong></li>
 </ul>
 <p><a href="https://stackoverflow.com/questions/59846238/guide-on-how-to-use-regex-in-nginx-location-block-section">https://stackoverflow.com/questions/59846238/guide-on-how-to-use-regex-in-nginx-location-block-section</a><br><a href="https://github.com/detailyang/nginx-location-match-visible">https://github.com/detailyang/nginx-location-match-visible</a></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2021-09-02T01:32:00.000Z" title="2021-09-02T01:32:00.000Z">2021-09-01</time><span class="level-item"> lawiet019 </span><span class="level-item">4 minutes read (About 623 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/09/01/notes-of-nginx-learning-5/">notes of nginx learning (5)</a></h1><div class="content"><ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2021-09-02T01:32:00.000Z" title="2021-09-02T01:32:00.000Z">2021-09-01</time><span class="level-item"> lawiet019 </span><span class="level-item">5 minutes read (About 718 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/09/01/notes-of-nginx-learning-5/">notes of nginx learning (5)</a></h1><div class="content"><ul>
 <li><p><strong>virtual host</strong><br>The virtual host<br><a href="https://www.youtube.com/watch?v=MmMEbLCt_-c">https://www.youtube.com/watch?v=MmMEbLCt_-c</a><br>The category of virtual host</p>
 <ul>
 <li>Virtual host based on  IP</li>
@@ -453,7 +453,16 @@ After that, we need to reload the config file</li>
     server_name www.example.com ~^www\d+\.example\.com$;
 }</code></p>
 <ol>
-<li>match priority</li>
+<li><p>what if we don’t specific  the server name</p>
+<p>It will be regarded as the  default server listening on that port.</p>
+<ul>
+<li>When Nginx receives an HTTP request on a port, it is handed off to the server listening on that port.</li>
+<li>If there are multiple servers listening on that port, it depends on the match order.</li>
+<li>If there is no matching server name, or if the Host in the request header is an IP address, it is handed off to the default server listening on that port.</li>
+</ul>
+</li>
+<li><p>match priority</p>
+</li>
 </ol>
 <p>In some cases, we could find match matched server_name. For example, we have the <code>nginx.conf</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">  server_name www.nginx.org</span><br><span class="line">&#125;</span><br><span class="line">server&#123;</span><br><span class="line">  server_name www.nginx.*</span><br><span class="line">&#125;</span><br><span class="line">server&#123;</span><br><span class="line">  server_name *.nginx.org</span><br><span class="line">&#125;</span><br><span class="line">server&#123;</span><br><span class="line">  server_name ~^www\d+\.nginx\.com$;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -464,6 +473,9 @@ After that, we need to reload the config file</li>
 <li>longest wildcard name ending with an asterisk, e.g. <code>mail.*</code></li>
 <li>first matching regular expression (in order of appearance in a configuration file)</li>
 </ol>
+<ul>
+<li><strong>reference</strong><br><a href="https://blog.csdn.net/qq_35952638/article/details/100163824">https://blog.csdn.net/qq_35952638/article/details/100163824</a></li>
+</ul>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2021-09-02T01:25:00.000Z" title="2021-09-02T01:25:00.000Z">2021-09-01</time><span class="level-item"> lawiet019 </span><span class="level-item"><a class="link-muted" href="/categories/technology/">technology</a></span><span class="level-item">7 minutes read (About 1014 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/09/01/notes-of-nginx-learning-4/">notes of nginx learning (4)</a></h1><div class="content"><ul>
 <li><strong>Configuration parameters for Nginx compilation and installation</strong></li>
 </ul>
