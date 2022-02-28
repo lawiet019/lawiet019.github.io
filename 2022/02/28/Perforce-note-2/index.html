@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Perforce note (2) - lawilet&#039;s website</title><meta description="commands basic reports commands        Command Meaning     p4 help commands Lists all Perforce commands with a brief description of each.   p4 help command For any command provided, gives detailed hel"><meta property="og:type" content="blog"><meta property="og:title" content="Perforce note (2)"><meta property="og:url" content="http://law-liet.com/2022/02/28/Perforce-note-2/"><meta property="og:site_name" content="lawilet&#039;s website"><meta property="og:description" content="commands basic reports commands        Command Meaning     p4 help commands Lists all Perforce commands with a brief description of each.   p4 help command For any command provided, gives detailed hel"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://law-liet.com/img/og_image.png"><meta property="article:published_time" content="2022-02-28T21:54:00.000Z"><meta property="article:modified_time" content="2022-02-28T21:55:06.694Z"><meta property="article:author" content="lawiet019"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://law-liet.com/2022/02/28/Perforce-note-2/"},"headline":"lawilet's website","image":["http://law-liet.com/img/og_image.png"],"datePublished":"2022-02-28T21:54:00.000Z","dateModified":"2022-02-28T21:55:06.694Z","author":{"@type":"Person","name":"lawiet019"},"description":"commands basic reports commands        Command Meaning     p4 help commands Lists all Perforce commands with a brief description of each.   p4 help command For any command provided, gives detailed hel"}</script><link rel="canonical" href="http://law-liet.com/2022/02/28/Perforce-note-2/"><link rel="icon" href="/img/favicon.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/favicon.png" alt="lawilet&#039;s website" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/lawiet019"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2022-02-28T21:54:00.000Z" title="2022-02-28T21:54:00.000Z">2022-02-28</time><span class="level-item"> lawiet019 </span><span class="level-item"><a class="link-muted" href="/categories/technology/">technology</a></span><span class="level-item">8 minutes read (About 1141 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">Perforce note (2)</h1><div class="content"><h2 id="commands"><a href="#commands" class="headerlink" title="commands"></a>commands</h2><ol>
+<li>basic reports commands  </li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p4 help commands</td>
+<td>Lists all Perforce commands with a brief description of each.</td>
+</tr>
+<tr>
+<td>p4 help command</td>
+<td>For any command provided, gives detailed help about that command. For example, p4 help sync provides detailed information about the p4 sync command.</td>
+</tr>
+<tr>
+<td>p4 help usage</td>
+<td>Describes command-line flags common to all Perforce commands.</td>
+</tr>
+<tr>
+<td>p4 help views</td>
+<td>Gives a discussion of Perforce view syntax.</td>
+</tr>
+<tr>
+<td>p4 help</td>
+<td>Describes all the arguments that can be given to p4 help.</td>
+</tr>
+<tr>
+<td>p4 info</td>
+<td>Reports information about the current Perforce system: the server address, client root directory, client name, user name, Perforce version, and licensing information.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol>
+<li>general report commands</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p4 filelog</td>
+<td>Generates a report on each revision of the file(s), in reverse chronological order.</td>
+</tr>
+<tr>
+<td>p4 files</td>
+<td>Lists file name, latest revision number, file type, and other information about the named file(s).</td>
+</tr>
+<tr>
+<td>p4 sync -n</td>
+<td>Tells you what p4 sync would do, without doing it.</td>
+</tr>
+<tr>
+<td>p4 have</td>
+<td>Lists all the revisions of the named files within the client that were last gotten from the depot. Without any files specifier, it lists all the files in the depot that the client has.</td>
+</tr>
+<tr>
+<td>p4 opened</td>
+<td>Reports on all files in the depot that are currently open for edit, add, delete, branch, or integrate within the client workspace.</td>
+</tr>
+<tr>
+<td>p4 print</td>
+<td>Lists the contents of the named file(s) to standard output.</td>
+</tr>
+<tr>
+<td>p4 where</td>
+<td>Given a file argument, displays the mapping of that file within the depot, the client workspace, and the local OS.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol>
+<li>Resolve Reporting</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p4 diff [filenames]</td>
+<td>Runs a diff program between the file revision currently in the client and the revision that was last gotten from the depot. If the file is not open for edit in the client, the two file revisions should be identical, so p4 diff fails. Comparison of the revisions can be forced with p4 diff -f, even when the file in the client is not open for edit</td>
+<td>Although p4 diff runs a diff routine internal to Perforce, this routine can be overridden by specifying an external diff in the P4DIFF environment variable.</td>
+</tr>
+<tr>
+<td>p4 diff2 file1 file2</td>
+<td>Runs p4d’s diff subroutine on any two Perforce depot files. The specified files can be any two file revisions, even revisions of entirely different files.The diff routine used by p4d cannot be overridden.</td>
+</tr>
+<tr>
+<td>p4 sync -n [filenames]</td>
+<td>Reports what the result of running p4 sync would be, without actually performing the sync. This is useful to see which files have conflicts and need to be resolved.</td>
+</tr>
+<tr>
+<td>p4 resolved</td>
+<td>Reports which files have been resolved but not yet submitted.</td>
+</tr>
+<tr>
+<td>p4 resolve</td>
+<td>Resolve conflicts between file revision, or resolve a stream spec conflict.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol>
+<li>The commands will influence changelist</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p4 add</td>
+<td>Open file(s) in a client workspace for addition to the depot.</td>
+</tr>
+<tr>
+<td>p4 delete</td>
+<td>Open file(s) in a client workspace for deletion from the depot.</td>
+</tr>
+<tr>
+<td>p4 edit</td>
+<td>Opens files in a client workspace for edit, or open the current stream spec</td>
+</tr>
+<tr>
+<td>p4 integrate</td>
+<td>Open files and/or the stream spec for branching or merging.</td>
+</tr>
+<tr>
+<td>p4 reopen</td>
+<td>Move opened files between changelists or change the files’ type, or move the client’s stream spec to a different changelist.</td>
+</tr>
+<tr>
+<td>p4 revert</td>
+<td>Discard changes made to open files or revert an open stream spec.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol>
+<li>Changelist Reporting</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p4 changes</td>
+<td>Displays a list of all pending and submitted changelists, one line per changelist, and an abbreviated description.</td>
+</tr>
+<tr>
+<td>p4 changes -m count</td>
+<td>Limits the number of changelists reported on to the last count changelists.</td>
+</tr>
+<tr>
+<td>p4 changes -s status</td>
+<td>Limits the list to those changelists with a particular status; for example, p4 changes -s submitted will list only already submitted changelists.</td>
+</tr>
+<tr>
+<td>p4 changes -u user</td>
+<td>Limits the list to those changelists submitted by a particular user.</td>
+</tr>
+<tr>
+<td>p4 changes -c workspace</td>
+<td>Limits the list to those changelists submitted from a particular client workspace.</td>
+</tr>
+<tr>
+<td>p4 describe changenum</td>
+<td>Displays full information about a single changelist. If the changelist has already been submitted, the report includes a list of affected files and the diffs of these files. (You can use the -s flag to exclude the file diffs.)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol>
+<li>Label Reporting</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p4 labels</td>
+<td>List the names, dates, and descriptions of all labels known to the server</td>
+</tr>
+<tr>
+<td>p4 labels file#revrange</td>
+<td>List the names, dates, and descriptions of all labels that tag the specified revision(s) of file.</td>
+</tr>
+<tr>
+<td>p4 files @labelname</td>
+<td>Lists all files and revisions tagged by labelname.</td>
+</tr>
+<tr>
+<td>p4 sync -n @labelname</td>
+<td>Lists the revisions tagged by the label that would be brought into your client workspace, (as well as files under Perforce control that would be deleted from your client workspace because they are not tagged by the label), without updating your client workspace.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol>
+<li>integrate related action</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p4 branch</td>
+<td>If the target file does not exist, it is opened for branch. The branch action is a variant of add, but Perforce keeps a record of which source file the target file was branched from. This allows three-way merges to be performed between subsequent source and target revisions with the original source file revision as base.</td>
+</tr>
+<tr>
+<td>p4 integrate</td>
+<td>If both the source and target files exist, the target is opened for integration, which is a variant of edit. Before a user can submit a file that has been opened for integration, the source and target must be merged with p4 resolve.</td>
+</tr>
+<tr>
+<td>p4 delete</td>
+<td>When the target file exists but no corresponding source file is mapped through the branch view, the target is marked for deletion. This is consistent with integrate’s semantics: it attempts to make the target tree reflect the source tree.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol>
+<li>Integration Reporting</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p4 integrate -n [filepatterns]</td>
+<td>Previews the results of the specified integration, but does not perform the integration. (To perform the integration, omit the -n flag.)</td>
+</tr>
+<tr>
+<td>p4 resolve -n [filepatterns]</td>
+<td>Displays files that are scheduled for resolve by p4 integrate, but does not perform the resolve. (To perform the resolve, omit the -n flag.)</td>
+</tr>
+<tr>
+<td>p4 resolved</td>
+<td>Displays files that have been resolved but not yet submitted.</td>
+</tr>
+<tr>
+<td>p4 branches</td>
+<td>Displays all branches.</td>
+</tr>
+<tr>
+<td>p4 integrated filepatterns</td>
+<td>Displays the integration history of the specified files.</td>
+</tr>
+<tr>
+<td>p4 filelog -i [filepatterns]</td>
+<td>Displays the revision histories of the specified files, including the integration histories of files from which the specified files were branched.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol>
+<li>report related commands</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p4 fix</td>
+<td>Link jobs to the changelists that fix them.</td>
+</tr>
+<tr>
+<td>p4 jobs -e jobview</td>
+<td>…all jobs that match particular criteria</td>
+</tr>
+<tr>
+<td>p4 jobs filespec</td>
+<td>…all the jobs that were fixed by changelists that affected particular file(s)</td>
+</tr>
+<tr>
+<td>p4 fixes -j jobname</td>
+<td>…all changelists and file revisions that fixed a particular job</td>
+</tr>
+<tr>
+<td>p4 fixes -c changenum</td>
+<td>…all jobs linked to a particular changelist</td>
+</tr>
+<tr>
+<td>p4 fixes filespec</td>
+<td>…all jobs fixed by changelists that contain particular files or file revisions</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><p><a href="https://www.perforce.com/perforce/doc.051/manuals/p4guide/index.html">https://www.perforce.com/perforce/doc.051/manuals/p4guide/index.html</a></p>
+</div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/02/26/Perforce-notes-1/"><span class="level-item">Perforce notes (1)</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="is-rounded" src="/img/avatar.jpeg" alt="koko"></figure><p class="title is-size-4 is-block line-height-inherit">koko</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Troy, NY</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">45</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">27</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/lawiet019" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/lawiet019"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/math/"><span class="level-start"><span class="level-item">math</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/technology/"><span class="level-start"><span class="level-item">technology</span></span><span class="level-end"><span class="level-item tag">38</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/technology/math/"><span class="level-start"><span class="level-item">math</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">Recent</h3><article class="media"><div class="media-content size-small"><p><time dateTime="2022-02-28T21:54:00.000Z">2022-02-28</time></p><p class="title is-6"><a class="link-muted" href="/2022/02/28/Perforce-note-2/">Perforce note (2)</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/technology/">technology</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2022-02-26T14:42:00.000Z">2022-02-26</time></p><p class="title is-6"><a class="link-muted" href="/2022/02/26/Perforce-notes-1/">Perforce notes (1)</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/technology/">technology</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2021-12-12T22:18:00.000Z">2021-12-12</time></p><p class="title is-6"><a class="link-muted" href="/2021/12/12/Dependency-Injection/"> Dependency Injection</a></p><p class="is-uppercase"></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2021-12-12T22:15:00.000Z">2021-12-12</time></p><p class="title is-6"><a class="link-muted" href="/2021/12/12/blueprint-in-flask/">blueprint in flask</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/technology/">technology</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2021-11-27T16:08:00.000Z">2021-11-27</time></p><p class="title is-6"><a class="link-muted" href="/2021/11/27/parallel-in-go/">parallel in go</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/technology/">technology</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2022/02/"><span class="level-start"><span class="level-item">February 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/12/"><span class="level-start"><span class="level-item">December 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/11/"><span class="level-start"><span class="level-item">November 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/09/"><span class="level-start"><span class="level-item">September 2021</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/08/"><span class="level-start"><span class="level-item">August 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/05/"><span class="level-start"><span class="level-item">May 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/12/"><span class="level-start"><span class="level-item">December 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/11/"><span class="level-start"><span class="level-item">November 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/10/"><span class="level-start"><span class="level-item">October 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/08/"><span class="level-start"><span class="level-item">August 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/07/"><span class="level-start"><span class="level-item">July 2020</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/06/"><span class="level-start"><span class="level-item">June 2020</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/05/"><span class="level-start"><span class="level-item">May 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/C/"><span class="tag">C++</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Graph/"><span class="tag">Graph</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/algorithm/"><span class="tag">algorithm</span><span class="tag is-grey-lightest">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/binary-search/"><span class="tag">binary search</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bit-manipulation/"><span class="tag">bit manipulation</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blueprint/"><span class="tag">blueprint</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/collections/"><span class="tag">collections</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/computing/"><span class="tag">computing</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/debug/"><span class="tag">debug</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dependency-injection/"><span class="tag">dependency injection</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dynamic-programming/"><span class="tag">dynamic programming</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/flask/"><span class="tag">flask</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/go/"><span class="tag">go</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/graph/"><span class="tag">graph</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hexo/"><span class="tag">hexo</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/learning-note/"><span class="tag">learning note</span><span class="tag is-grey-lightest">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/linked-list/"><span class="tag">linked list</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/multiprocess/"><span class="tag">multiprocess</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/multithread/"><span class="tag">multithread</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/nginx/"><span class="tag">nginx</span><span class="tag is-grey-lightest">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/perforce/"><span class="tag">perforce</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag is-grey-lightest">23</span></a></div><div class="control"><a class="tags has-addons" href="/tags/regular-expression/"><span class="tag">regular expression</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/sort/"><span class="tag">sort</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/sorting/"><span class="tag">sorting</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tool/"><span class="tag">tool</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tree/"><span class="tag">tree</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe to Updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button is-primary" type="submit" value="Subscribe"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/favicon.png" alt="lawilet&#039;s website" height="28"></a><p class="size-small"><span>&copy; 2022 lawiet019</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            site: {
+                url: 'http://law-liet.com',
+                external_link: {"enable":true,"exclude":[]}
+            },
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to Top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
